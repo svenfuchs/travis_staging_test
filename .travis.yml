@@ -1,7 +1,26 @@
-language: node_js
+language: rust
 
-node_js:
-  - '4'
+rust:
+  - stable
+  - nightly
+  - foo
+matrix:
+  include:
+    - rust: stable
+      env:
+        - INT=32
+    - rust: beta
+      env:
+        - INT=32
+    - rust: nightly
+      env:
+        - INT=32
+    - rust: nightly
+      env:
+        - FEATURES="simd-accel"
+    - rust: nightly
+      env:
+        - FEATURES="avx-accel"
 
 sudo: false
 
@@ -9,7 +28,7 @@ install:
   - true
 
 script:
-  - echo $PATH | tr ":" "\n" | sort
+  - true
 
 notifications:
   email: false
