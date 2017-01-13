@@ -4,17 +4,11 @@ sudo: false
 
 dist: trusty
 
-addons:
-  sauce_connect:
-    username: "Your Sauce Labs username"
-    access_key: "Your Sauce Labs access key"
-
-
 install:
   - true
 
 script:
-  - true
+  - env | sort | grep TRAVIS
 
 notifications:
   email: false
