@@ -11,6 +11,9 @@ install:
 script:
   - true
 
+after_failure:
+  - echo $TRAVIS_TEST_RESULT
+
 addons:
   coverity_scan:
 
