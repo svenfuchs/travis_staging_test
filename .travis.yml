@@ -1,30 +1,43 @@
-language: java
+language: ruby
 sudo: false
 dist: precise
 
 env:
   - DIST=precise STACK=EC2
 
-matrix:
-  include:
-    - sudo: required
-      dist: precise
-      env: DIST=precise STACK=GCE
-    - sudo: false
-      dist: trusty
-      env: DIST=trusty STACK=EC2
-    - sudo: required
-      dist: trusty
-      env: DIST=trusty STACK=GCE
-  allow_failures:
-    - dist: precise
-
 install:
   - true
 
 script:
-  - echo $JAVA_HOME
-  - which javac
+  - true
+
+env:
+  global:
+    # COVERITY_SCAN_TOKEN
+    # ** specific to your project **
+    - secure: "xxxx"
+
+addons:
+  coverity_scan:
+
+    # GitHub project metadata
+    # ** specific to your project **
+    project:
+      name: my_github/my_project
+      version: 1.0
+      description: My Project
+
+    # Where email notification of build analysis results will be sent
+    notification_email: scan_notifications@example.com
+
+    # Commands to prepare for build_command
+    # ** likely specific to your build **
+    build_command_prepend: ./configure
+
+    # The command that will be added as an argument to "cov-build" to compile your project for analysis,
+    # ** likely specific to your build **
+    build_command: make
+
 
 notifications:
   email: false
