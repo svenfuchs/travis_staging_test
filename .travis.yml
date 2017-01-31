@@ -11,12 +11,6 @@ install:
 script:
   - true
 
-env:
-  global:
-    # COVERITY_SCAN_TOKEN
-    # ** specific to your project **
-    - secure: "xxxx"
-
 addons:
   coverity_scan:
 
