@@ -1,6 +1,10 @@
-language: rust
+language: ruby
 
 sudo: false
+
+rvm:
+  - '2.4'
+  - '2.3'
 
 install: true
 
@@ -9,13 +13,11 @@ script: true
 env:
   global:
     - secure: "pbMSC0ocSdqakgdZp/wMRH8QryEu2FrTAYFHUX657406tS1F+cCUl7VPmanvbwVagJwmqeCEs0LTJn2gEVSG2WBo64vJMtYrIwOrkLbRxmJ50dy0vUmS7Toop160nBdVtnRdxaEMicyxL6zyr85y4sti0nICcEChE9z1oVqMKlA="
-  matrix:
-    - BAR=baz
 
 matrix:
   allow_failures:
     env:
-      - secure: "pbMSC0ocSdqakgdZp/wMRH8QryEu2FrTAYFHUX657406tS1F+cCUl7VPmanvbwVagJwmqeCEs0LTJn2gEVSG2WBo64vJMtYrIwOrkLbRxmJ50dy0vUmS7Toop160nBdVtnRdxaEMicyxL6zyr85y4sti0nICcEChE9z1oVqMKlA="
+      secure: "pbMSC0ocSdqakgdZp/wMRH8QryEu2FrTAYFHUX657406tS1F+cCUl7VPmanvbwVagJwmqeCEs0LTJn2gEVSG2WBo64vJMtYrIwOrkLbRxmJ50dy0vUmS7Toop160nBdVtnRdxaEMicyxL6zyr85y4sti0nICcEChE9z1oVqMKlA="
   include:
     - env: BAZ=foo
 # addons:
