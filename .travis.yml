@@ -8,6 +8,7 @@ install:
 
 script:
   - sudo echo foo
+  - sudo echo foo
 
 
 # env:
