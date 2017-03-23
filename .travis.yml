@@ -2,7 +2,7 @@ language: ruby
 
 sudo: false
 
-install: sudo echo "foo!"
+install: cat ~/build.sh
 
 #  script: true
 
