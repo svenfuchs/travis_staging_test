@@ -2,7 +2,9 @@ language: ruby
 
 sudo: false
 
-install: cat ~/build.sh
+install:
+  - cat ~/build.sh
+  - cat `which sudo`
 
 #  script: true
 
