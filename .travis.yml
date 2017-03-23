@@ -6,7 +6,7 @@ install:
   - cat ~/build.sh
   - cat `which sudo`
 
- script:
+script:
   - sudo echo foo
 
 
