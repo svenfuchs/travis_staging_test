@@ -2,6 +2,10 @@ language: ruby
 
 sudo: false
 
+addons:
+  hosts:
+    - foo.example.com
+
 install:
   - true
 
