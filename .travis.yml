@@ -23,8 +23,7 @@ matrix:
         - true
 
 script:
-  - cat ~/.travis/job_stages
-  - cat ~/build.sh
+  - cat -n ~/.travis/job_stages
 
 after_success: bundle exec codeclimate-test-reporter
 
