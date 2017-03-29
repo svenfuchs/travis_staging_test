@@ -1,10 +1,34 @@
 language: ruby
 
+cache:
+  branch: md5deep
+  bundler: true
+
 sudo: false
 
-before_install:
-  - cat ~/.job_stages
+env:
+  global:
+  - RUBYOPT='-W0'
+  - COVERAGE=1
+  matrix:
+  - INTEGRATION_SPECS=0
+  - INTEGRATION_SPECS=1
+
+matrix:
+  include:
+    - sudo: required
+      dist: trusty
+      env:
+      script:
+        - true
+
+script:
+  - cat ~/.travis/job_stages
   - cat ~/build.sh
+
+after_success: bundle exec codeclimate-test-reporter
+
+before_deploy: ruby script/build_s3_index_html.rb
 
 # env:
 #   - secure: "pbMSC0ocSdqakgdZp/wMRH8QryEu2FrTAYFHUX657406tS1F+cCUl7VPmanvbwVagJwmqeCEs0LTJn2gEVSG2WBo64vJMtYrIwOrkLbRxmJ50dy0vUmS7Toop160nBdVtnRdxaEMicyxL6zyr85y4sti0nICcEChE9z1oVqMKlA="
