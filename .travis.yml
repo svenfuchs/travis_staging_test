@@ -1,43 +1,13 @@
-language: ruby
-
-cache:
-  branch: md5deep
-  bundler: true
+language: php
 
 sudo: false
 
-env:
-  global:
-  - RUBYOPT='-W0'
-  - COVERAGE=1
-  matrix:
-  - INTEGRATION_SPECS=0
-  - INTEGRATION_SPECS=1
-
-matrix:
-  include:
-    - sudo: required
-      dist: trusty
-      env:
-      script:
-        - true
+install: true
 
 script:
-  - cat -n ~/.travis/job_stages
+  - true
 
 # after_success: bundle exec codeclimate-test-reporter
-
-before_deploy: echo hello
-
-deploy:
-  - provider: script
-    script: echo foo!
-    on:
-      all_branches: true
-  - provider: script
-    script: echo foo2!
-    on:
-      all_branches: true
 
 # env:
 #   - secure: "pbMSC0ocSdqakgdZp/wMRH8QryEu2FrTAYFHUX657406tS1F+cCUl7VPmanvbwVagJwmqeCEs0LTJn2gEVSG2WBo64vJMtYrIwOrkLbRxmJ50dy0vUmS7Toop160nBdVtnRdxaEMicyxL6zyr85y4sti0nICcEChE9z1oVqMKlA="
