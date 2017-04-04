@@ -10,7 +10,7 @@ perl:
 install: true
 
 script:
-  - true
+  - perl -V
 
 # after_success: bundle exec codeclimate-test-reporter
 
