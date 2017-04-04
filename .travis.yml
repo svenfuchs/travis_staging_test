@@ -11,13 +11,13 @@ script:
 
 # env:
 #   - secure: "pbMSC0ocSdqakgdZp/wMRH8QryEu2FrTAYFHUX657406tS1F+cCUl7VPmanvbwVagJwmqeCEs0LTJn2gEVSG2WBo64vJMtYrIwOrkLbRxmJ50dy0vUmS7Toop160nBdVtnRdxaEMicyxL6zyr85y4sti0nICcEChE9z1oVqMKlA="
-# addons:
-#   sauce_connect:
-#     username: foobar12345677
-#     jwt:
-#       - secure: "Nn3QiQtVc3KK9jAhpHdDt0JJ1fok/g5OrbWXoU1IV8MWt6xrvbeRonlAPZ3eMgizs2XULhCha+yGHitgQ3jzEAKvDSihZ9CPHpwgcnvETbzunowQtigQxamLGeKl0nvFNrNssBMOE+/oDd4vpiOA43nu1gr5rPPZzTgVumaHrW4="
-#   jwt:
-#     - secure: "Nn3QiQtVc3KK9jAhpHdDt0JJ1fok/g5OrbWXoU1IV8MWt6xrvbeRonlAPZ3eMgizs2XULhCha+yGHitgQ3jzEAKvDSihZ9CPHpwgcnvETbzunowQtigQxamLGeKl0nvFNrNssBMOE+/oDd4vpiOA43nu1gr5rPPZzTgVumaHrW4="
+addons:
+  sauce_connect:
+    username: foobar12345677
+    jwt:
+      - secure: "Nn3QiQtVc3KK9jAhpHdDt0JJ1fok/g5OrbWXoU1IV8MWt6xrvbeRonlAPZ3eMgizs2XULhCha+yGHitgQ3jzEAKvDSihZ9CPHpwgcnvETbzunowQtigQxamLGeKl0nvFNrNssBMOE+/oDd4vpiOA43nu1gr5rPPZzTgVumaHrW4="
+  jwt:
+    - secure: "Nn3QiQtVc3KK9jAhpHdDt0JJ1fok/g5OrbWXoU1IV8MWt6xrvbeRonlAPZ3eMgizs2XULhCha+yGHitgQ3jzEAKvDSihZ9CPHpwgcnvETbzunowQtigQxamLGeKl0nvFNrNssBMOE+/oDd4vpiOA43nu1gr5rPPZzTgVumaHrW4="
 
 # env:
 #   - DIST=precise STACK=EC2
