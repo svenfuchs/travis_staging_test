@@ -6,7 +6,10 @@ install: true
 
 script: cat ~/build.sh
 
-cache: bundler
+cache:
+  bundler: true
+  edge:
+    branch: emoji
 
 # after_success: bundle exec codeclimate-test-reporter
 
