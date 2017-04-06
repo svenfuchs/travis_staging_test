@@ -8,8 +8,8 @@ script: cat ~/build.sh
 
 cache:
   bundler: true
-  edge:
-    branch: emoji
+  edge: true
+  branch: emoji
 
 # after_success: bundle exec codeclimate-test-reporter
 
