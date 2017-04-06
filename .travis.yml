@@ -4,7 +4,7 @@ sudo: false
 
 install: true
 
-script: cat: ~/build.sh
+script: cat ~/build.sh
 
 cache: bundler
 
