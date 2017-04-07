@@ -4,7 +4,7 @@ sudo: false
 
 install: true
 
-script: true
+script: cat /etc/apt/sources.list
 
 
 # after_success: bundle exec codeclimate-test-reporter
