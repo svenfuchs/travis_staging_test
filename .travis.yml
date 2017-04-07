@@ -6,10 +6,6 @@ install: true
 
 script: true
 
-cache:
-  bundler: true
-  edge: true
-  branch: emoji
 
 # after_success: bundle exec codeclimate-test-reporter
 
