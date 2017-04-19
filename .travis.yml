@@ -1,16 +1,10 @@
-language: perl
+language: ruby
 
 sudo: false
 
-perl:
-  - '5.24'
-  - '5.24.0'
-  - '5.24-shrplib'
-
 install: true
 
-script:
-  - perl -V
+script: true
 
 # after_success: bundle exec codeclimate-test-reporter
 
@@ -24,20 +18,20 @@ script:
 #   jwt:
 #     - secure: "Nn3QiQtVc3KK9jAhpHdDt0JJ1fok/g5OrbWXoU1IV8MWt6xrvbeRonlAPZ3eMgizs2XULhCha+yGHitgQ3jzEAKvDSihZ9CPHpwgcnvETbzunowQtigQxamLGeKl0nvFNrNssBMOE+/oDd4vpiOA43nu1gr5rPPZzTgVumaHrW4="
 
-# env:
-#   - DIST=precise STACK=EC2
+env:
+  - DIST=precise STACK=EC2
 
-# matrix:
-#   include:
-#     - sudo: required
-#       dist: precise
-#       env: DIST=precise STACK=GCE
-#     - sudo: false
-#       dist: trusty
-#       env: DIST=trusty STACK=EC2
-#     - sudo: required
-#       dist: trusty
-#       env: DIST=trusty STACK=GCE
+matrix:
+  include:
+    - sudo: required
+      dist: precise
+      env: DIST=precise STACK=GCE
+    - sudo: false
+      dist: trusty
+      env: DIST=trusty STACK=EC2
+    - sudo: required
+      dist: trusty
+      env: DIST=trusty STACK=GCE
 
 
   #  webhooks: http://requestb.in/rin6s6ri
