@@ -6,6 +6,13 @@ install: true
 
 script: true
 
+addons:
+  apt:
+    packages:
+      - libncurses5:i386
+      - libstdc++6:i386
+      - zlib1g:i386
+
 # after_success: bundle exec codeclimate-test-reporter
 
 # env:
