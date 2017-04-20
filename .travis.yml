@@ -19,6 +19,9 @@ addons:
 env:
   - DIST=precise STACK=EC2
 
+deploy:
+  - bad data
+
 # matrix:
 #   include:
 #     - sudo: required
