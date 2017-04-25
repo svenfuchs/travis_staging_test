@@ -1,10 +1,9 @@
-language: ruby
+language: elixir
 
 sudo: false
 
-addons:
-  apt:
-    - bad data
+elixir:
+  - ^19.0.0
 
 install: true
 
