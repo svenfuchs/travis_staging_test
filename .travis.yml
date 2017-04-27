@@ -1,9 +1,6 @@
-language: elixir
+language: ruby
 
 sudo: false
-
-elixir:
-  - ^19.0.0
 
 install: true
 
