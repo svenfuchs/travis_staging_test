@@ -4,7 +4,7 @@ sudo: false
 
 install: true
 
-script: true
+script: echo $FOO
 
 env:
   - DIST=precise STACK=EC2
