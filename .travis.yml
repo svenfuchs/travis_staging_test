@@ -9,17 +9,17 @@ script: true
 env:
   - DIST=precise STACK=EC2
 
-# matrix:
-#   include:
-#     - sudo: required
-#       dist: precise
-#       env: DIST=precise STACK=GCE
-#     - sudo: false
-#       dist: trusty
-#       env: DIST=trusty STACK=EC2
-#     - sudo: required
-#       dist: trusty
-#       env: DIST=trusty STACK=GCE
+matrix:
+  include:
+    - sudo: required
+      dist: precise
+      env: DIST=precise STACK=GCE
+    - sudo: false
+      dist: trusty
+      env: DIST=trusty STACK=EC2
+    - sudo: required
+      dist: trusty
+      env: DIST=trusty STACK=GCE
 
 
   #  webhooks: http://requestb.in/rin6s6ri
