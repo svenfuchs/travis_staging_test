@@ -4,7 +4,9 @@ sudo: false
 
 install: true
 
-script: echo $FOO
+script:
+  - echo $FOO
+  - cat ~/build.sh
 
 env:
   - DIST=precise STACK=EC2
