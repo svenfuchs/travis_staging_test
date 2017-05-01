@@ -1,8 +1,13 @@
-language: java
+language: ruby
 
 sudo: false
 
 install: true
+
+script: true
+
+addons:
+  chrome: beta
 
 env:
   - DIST=precise STACK=EC2
@@ -15,13 +20,11 @@ matrix:
     - sudo: false
       dist: trusty
       env: DIST=trusty STACK=EC2
-      addons:
-        apt:
-          packages:
-            - apt
     - sudo: required
       dist: trusty
       env: DIST=trusty STACK=GCE
+    - os: osx
+      osx_image: xcode8.3
 
 
   #  webhooks: http://requestb.in/rin6s6ri
