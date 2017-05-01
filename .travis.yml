@@ -1,32 +1,29 @@
-language: ruby
+language: java
 
-sudo: required
+sudo: false
 
 install: true
 
-script: firefox --version
+script: cat ~/.m2/settings.xml
 
 env:
   - DIST=precise STACK=EC2
 
-addons:
-  firefox: 'latest-unsigned'
-
-# matrix:
-#   include:
-#     - sudo: required
-#       dist: precise
-#       env: DIST=precise STACK=GCE
-#     - sudo: false
-#       dist: trusty
-#       env: DIST=trusty STACK=EC2
-#       addons:
-#         apt:
-#           packages:
-#             - apt
-#     - sudo: required
-#       dist: trusty
-#       env: DIST=trusty STACK=GCE
+matrix:
+  include:
+    - sudo: required
+      dist: precise
+      env: DIST=precise STACK=GCE
+    - sudo: false
+      dist: trusty
+      env: DIST=trusty STACK=EC2
+      addons:
+        apt:
+          packages:
+            - apt
+    - sudo: required
+      dist: trusty
+      env: DIST=trusty STACK=GCE
 
 
   #  webhooks: http://requestb.in/rin6s6ri
