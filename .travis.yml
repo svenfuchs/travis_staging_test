@@ -4,8 +4,6 @@ sudo: false
 
 install: true
 
-script: cat ~/.m2/settings.xml
-
 env:
   - DIST=precise STACK=EC2
 
