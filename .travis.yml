@@ -4,10 +4,10 @@ sudo: false
 
 install: true
 
-script: google-chrome-beta --version
+script: true
 
 addons:
-  chrome: beta
+  firefox: latest
 
 env:
   - DIST=precise STACK=EC2
@@ -25,7 +25,6 @@ matrix:
       env: DIST=trusty STACK=GCE
     - os: osx
       osx_image: xcode8.3
-      script: "/Applications/Google\\ Chrome.app/Contents/MacOS/Google\\ Chrome --version"
 
 
   #  webhooks: http://requestb.in/rin6s6ri
