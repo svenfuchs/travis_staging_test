@@ -4,7 +4,7 @@ ghc:
   - 7.8.x
   - 8.0.x
 
-sudo: false
+# sudo: false
 
 # install: true
 
