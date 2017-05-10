@@ -4,6 +4,8 @@ ghc:
   - 7.8.x
   - 8.0.x
 
+dist: trusty
+
 # sudo: false
 
 # install: true
