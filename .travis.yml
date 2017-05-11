@@ -6,6 +6,11 @@ sudo: false
 
 script: true
 
+addons:
+  apt:
+    packages:
+      - haveged
+
 # addons:
 #   firefox: latest
 
