@@ -1,16 +1,10 @@
-language: haskell
+language: ruby
 
-ghc:
-  - 7.8.x
-  - 8.0.x
+rvm: jruby
 
-dist: trusty
+sudo: false
 
-# sudo: false
-
-# install: true
-
-# script: true
+script: true
 
 # addons:
 #   firefox: latest
@@ -18,19 +12,19 @@ dist: trusty
 env:
   - DIST=precise STACK=EC2
 
-# matrix:
-#   include:
-#     - sudo: required
-#       dist: precise
-#       env: DIST=precise STACK=GCE
-#     - sudo: false
-#       dist: trusty
-#       env: DIST=trusty STACK=EC2
-#     - sudo: required
-#       dist: trusty
-#       env: DIST=trusty STACK=GCE
-#     - os: osx
-#       osx_image: xcode8.3
+matrix:
+  include:
+    - sudo: required
+      dist: precise
+      env: DIST=precise STACK=GCE
+    - sudo: false
+      dist: trusty
+      env: DIST=trusty STACK=EC2
+    - sudo: required
+      dist: trusty
+      env: DIST=trusty STACK=GCE
+    - os: osx
+      osx_image: xcode8.3
 
 
   #  webhooks: http://requestb.in/rin6s6ri
