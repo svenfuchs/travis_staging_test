@@ -28,7 +28,7 @@ env:
 
 deploy:
   provider: script
-  script: true
+  script: echo "true"
   edge:
     branch: exitstatus
   on:
