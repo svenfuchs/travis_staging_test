@@ -8,6 +8,8 @@ script: true
 
 ghc: 8.2.1
 
+cabal_version: '2.0'
+
 # addons:
 #   firefox: latest
 
