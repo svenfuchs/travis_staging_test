@@ -1,15 +1,10 @@
 language: ruby
 
-rvm: jruby
-
 sudo: false
 
-script: true
+install: true
 
-addons:
-  apt:
-    packages:
-      - haveged
+script: true
 
 # addons:
 #   firefox: latest
@@ -17,20 +12,30 @@ addons:
 env:
   - DIST=precise STACK=EC2
 
-matrix:
-  include:
-    - sudo: required
-      dist: precise
-      env: DIST=precise STACK=GCE
-    - sudo: false
-      dist: trusty
-      env: DIST=trusty STACK=EC2
-    - sudo: required
-      dist: trusty
-      env: DIST=trusty STACK=GCE
-    - os: osx
-      osx_image: xcode8.3
+# matrix:
+#   include:
+#     - sudo: required
+#       dist: precise
+#       env: DIST=precise STACK=GCE
+#     - sudo: false
+#       dist: trusty
+#       env: DIST=trusty STACK=EC2
+#     - sudo: required
+#       dist: trusty
+#       env: DIST=trusty STACK=GCE
+#     - os: osx
+#       osx_image: xcode8.3
 
+deploy:
+  provider: script
+  script: false
+  edge:
+    branch: exitstatus
+  on:
+    all_branches: true
+
+after_deploy:
+  - echo $TRAVIS_DEPLOY_STATUS
 
   #  webhooks: http://requestb.in/rin6s6ri
   #slack:
