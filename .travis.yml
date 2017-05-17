@@ -1,10 +1,12 @@
-language: scala
+language: haskell
 
 sudo: false
 
 install: true
 
-# script: true
+script: true
+
+ghc: 8.2.1
 
 # addons:
 #   firefox: latest
