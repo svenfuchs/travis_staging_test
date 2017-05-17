@@ -1,10 +1,10 @@
-language: ruby
+language: scala
 
 sudo: false
 
 install: true
 
-script: true
+# script: true
 
 # addons:
 #   firefox: latest
@@ -25,17 +25,6 @@ env:
 #       env: DIST=trusty STACK=GCE
 #     - os: osx
 #       osx_image: xcode8.3
-
-deploy:
-  provider: script
-  script: docker images && docker tag "${TRAVIS_REPO_SLUG}:cli" "${TRAVIS_REPO_SLUG}:${TRAVIS_TAG}" && docker push "${TRAVIS_REPO_SLUG}:${TRAVIS_TAG} && docker tag "${TRAVIS_REPO_SLUG}:cli" "${TRAVIS_REPO_SLUG}:latest" && docker push "${TRAVIS_REPO_SLUG}:latest"
-  edge:
-    branch: v1.8.31
-  on:
-    all_branches: true
-
-after_deploy:
-  - echo $TRAVIS_DEPLOY_STATUS
 
   #  webhooks: http://requestb.in/rin6s6ri
   #slack:
