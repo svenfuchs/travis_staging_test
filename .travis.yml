@@ -1,4 +1,4 @@
-language: haskell
+language: ruby
 
 sudo: false
 
@@ -6,30 +6,32 @@ install: true
 
 script: true
 
-ghc: 8.2.1
+rvm:
+  - '2.1'
+  - '2.2'
 
-cabal_version: '2.0'
+dist:
+  - trusty
+  - precise
+
 
 # addons:
 #   firefox: latest
 
-env:
-  - DIST=precise STACK=EC2
-
-matrix:
-  include:
-    - sudo: required
-      dist: precise
-      ghc: 8.2.1
-      env: DIST=precise STACK=GCE
-    - sudo: false
-      dist: trusty
-      ghc: 8.2.1
-      env: DIST=trusty STACK=EC2
-    - sudo: required
-      dist: trusty
-      ghc: 8.2.1
-      env: DIST=trusty STACK=GCE
+# matrix:
+#   include:
+#     - sudo: required
+#       dist: precise
+#       ghc: 8.2.1
+#       env: DIST=precise STACK=GCE
+#     - sudo: false
+#       dist: trusty
+#       ghc: 8.2.1
+#       env: DIST=trusty STACK=EC2
+#     - sudo: required
+#       dist: trusty
+#       ghc: 8.2.1
+#       env: DIST=trusty STACK=GCE
 #     - os: osx
 #       osx_image: xcode8.3
 
