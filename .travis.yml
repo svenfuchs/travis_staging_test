@@ -2,6 +2,9 @@ language: objective-c
 
 sudo: false
 
+before_install:
+  - brew update
+
 install: true
 
 script: true
