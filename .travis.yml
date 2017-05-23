@@ -1,20 +1,10 @@
-language: ruby
+language: objective-c
 
 sudo: false
 
 install: true
 
 script: true
-
-addons:
-  browserstack:
-    username: "jiridanek1"
-    access_key:
-      secure: "yB5uMh21ZW7MULaKmxplao3DYcanUPV3gyWmXue8A9ILTmGzgbJgm+HNLY8SL9lRT/PHAxZ741n6gqCAbanTpe74GicvebeMQjlJ4VWo5762pCaB5f/neM8g2sPZLIRNn0YxyuEWe7kkmP0AZ7tjHKqPc34avhobaURNDoVC8/2uaUFaqqs6T9MX9j7EKObT0BsFDygsSHRlzWcN5pmvVg25J20+F8aAwOx0mKWXn/c0wN9NSYGrB3JnuzBQFfs6M/DB36+kxrSo4xBrZ//HTqPWYTpsvq2nIJjzUY0wHowuGNRga90mFvlRFuRObn9pH8gSYWwQ4gTYayZKYoQdVtmrQpvVvrBE0YXE4ZBzFRbjw3INIrX7CTcTc9VVW1C4aMR2e8UKkh+vFSdcw9ibc4+hVoiEE+e23wgp/HjnNEtHrT1khDWJkmKmiF41IAqfFq4Zb7wPdR604Nb8XSUnhyaqt969vhmCzXdqtNcwpB/dN7EWBENzMh9Fv0NGJDX5aaQLUfVNQ5I5jwt+4TjPKGkiOiHIDH+/h8o7qvvgKe07Q0kXhpRkz4+abKzW3fuizpwGhiQlExsnM4Rg8k/5mIKSz4m0ydIL3CrNmsHg3Noc1dUMzhbAS5sQOSdWfi9LYmWRjbyoEu5A3ECbp8MnT4q9wRwD7jX2zMWKoEnce40="
-
-dist: precise
-
-sudo: false
 
 # addons:
 #   firefox: latest
