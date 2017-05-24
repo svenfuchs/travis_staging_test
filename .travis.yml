@@ -11,7 +11,8 @@ group: edge
 install:
   - gem uninstall bundler -a
   - gem install bundler -v 1.10.6
-  - bundle --version
+  - bundle _1.10.6_ --version
+  - bundle _1.10.6_ install
 
 script: true
 
