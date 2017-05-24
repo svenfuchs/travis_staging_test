@@ -1,9 +1,12 @@
-language: objective-c
+language: php
 
 sudo: false
 
-before_install:
-  - brew update
+dist: precise
+
+php:
+  - '7.0'
+  - hhvm
 
 install: true
 
