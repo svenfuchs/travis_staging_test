@@ -1,40 +1,35 @@
 language: ruby
 
-rvm: 2.2.4
-
 sudo: false
 
 dist: precise
 
-group: edge
-
 install:
-  - gem uninstall bundler -a
-  - gem install bundler -v 1.10.6
-  - bundle _1.10.6_ --version
-  - bundle _1.10.6_ install
-
-script: true
+  - true
+script:
+  - true
 
 # addons:
 #   firefox: latest
 
-# matrix:
-#   include:
-#     - sudo: required
-#       dist: precise
-#       ghc: 8.2.1
-#       env: DIST=precise STACK=GCE
-#     - sudo: false
-#       dist: trusty
-#       ghc: 8.2.1
-#       env: DIST=trusty STACK=EC2
-#     - sudo: required
-#       dist: trusty
-#       ghc: 8.2.1
-#       env: DIST=trusty STACK=GCE
-#     - os: osx
-#       osx_image: xcode8.3
+matrix:
+  include:
+    - sudo: required
+      dist: precise
+      ghc: 8.2.1
+      env: DIST=precise STACK=GCE
+      branch: default
+    - sudo: false
+      dist: trusty
+      ghc: 8.2.1
+      env: DIST=trusty STACK=EC2
+      branch: master
+    # - sudo: required
+    #   dist: trusty
+    #   ghc: 8.2.1
+    #   env: DIST=trusty STACK=GCE
+    # - os: osx
+    #   osx_image: xcode8.3
 
   #  webhooks: http://requestb.in/rin6s6ri
   #slack:
