@@ -9,7 +9,7 @@ install:
 script:
   - true
 
-php: 7.1
+env:
 
 # addons:
 #   firefox: latest
