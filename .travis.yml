@@ -9,6 +9,8 @@ install:
 script:
   - true
 
+php: 7.1
+
 # addons:
 #   firefox: latest
 
