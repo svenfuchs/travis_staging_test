@@ -1,8 +1,6 @@
-language: ruby
+language: php
 
 sudo: false
-
-rvm: '2.2.4'
 
 dist: precise
 
@@ -24,10 +22,10 @@ matrix:
       dist: trusty
       env: DIST=trusty STACK=EC2
       branch: master
-    # - sudo: required
-    #   dist: trusty
-    #   ghc: 8.2.1
-    #   env: DIST=trusty STACK=GCE
+    - sudo: required
+      dist: trusty
+      ghc: 8.2.1
+      env: DIST=trusty STACK=GCE
     # - os: osx
     #   osx_image: xcode8.3
 
