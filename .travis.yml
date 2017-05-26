@@ -17,14 +17,11 @@ matrix:
     - sudo: required
       dist: precise
       env: DIST=precise STACK=GCE
-      branch: default
     - sudo: false
       dist: trusty
       env: DIST=trusty STACK=EC2
-      branch: master
     - sudo: required
       dist: trusty
-      ghc: 8.2.1
       env: DIST=trusty STACK=GCE
     # - os: osx
     #   osx_image: xcode8.3
