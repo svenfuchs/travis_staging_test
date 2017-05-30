@@ -1,32 +1,35 @@
-language: php
+language: ruby
 
 sudo: false
 
-dist: precise
+install: skip
 
-install:
-  - true
-script:
-  - true
+script: skip
 
-php: '5.3'
-
-env:
-
-# addons:
-#   firefox: latest
-
-matrix:
+jobs:
   include:
-    - sudo: required
-      dist: precise
-      env: DIST=precise STACK=GCE
-    - sudo: false
-      dist: trusty
-      env: DIST=trusty STACK=EC2
-    - sudo: required
-      dist: trusty
-      env: DIST=trusty STACK=GCE
+    - stage: verify project version
+      script:
+        - true
+
+    - stage: tests
+      script:
+        - true
+    - stage: tests
+      script:
+        - true
+
+# matrix:
+#   include:
+#     - sudo: required
+#       dist: precise
+#       env: DIST=precise STACK=GCE
+#     - sudo: false
+#       dist: trusty
+#       env: DIST=trusty STACK=EC2
+#     - sudo: required
+#       dist: trusty
+#       env: DIST=trusty STACK=GCE
     # - os: osx
     #   osx_image: xcode8.3
 
