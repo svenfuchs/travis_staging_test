@@ -1,4 +1,4 @@
-language: ruby
+﻿language: go
 
 sudo: false
 
@@ -6,18 +6,6 @@ install: skip
 
 script: skip
 
-jobs:
-  include:
-    - stage: verify project version
-      script:
-        - true
-
-    - stage: tests
-      script:
-        - true
-    - stage: tests
-      script:
-        - true
 
 # matrix:
 #   include:
