@@ -6,18 +6,20 @@ install: skip
 
 script: skip
 
-
-# matrix:
-#   include:
-#     - sudo: required
-#       dist: precise
-#       env: DIST=precise STACK=GCE
-#     - sudo: false
-#       dist: trusty
-#       env: DIST=trusty STACK=EC2
-#     - sudo: required
-#       dist: trusty
-#       env: DIST=trusty STACK=GCE
+matrix:
+  include:
+    - sudo: false
+      dist: precise
+      env: DIST=precise STACK=GCE
+    - sudo: required
+      dist: precise
+      env: DIST=precise STACK=EC2
+    - sudo: false
+      dist: trusty
+      env: DIST=trusty STACK=EC2
+    - sudo: required
+      dist: trusty
+      env: DIST=trusty STACK=GCE
     # - os: osx
     #   osx_image: xcode8.3
 
