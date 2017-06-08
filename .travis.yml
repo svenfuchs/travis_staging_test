@@ -1,7 +1,9 @@
-language: ruby
+language: python
 
-os: osx
-osx_image: xcode8.3
+python:
+  - '3.5'
+  - 'pypy3'
+  - 'pypy'
 
 install: skip
 
