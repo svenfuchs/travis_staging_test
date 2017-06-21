@@ -1,15 +1,14 @@
 language: python
 
-dist: trusty
+sudo: false
 
-python:
-  - '3.5'
-  - 'pypy3'
-  - 'pypy'
+dist: trusty
 
 install: skip
 
 script: skip
+
+cleanup: echo foo
 
 # matrix:
 #   include:
