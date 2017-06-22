@@ -8,7 +8,8 @@ install: skip
 
 script: skip
 
-cleanup: echo foo
+env:
+  - secure: "G4TUCubT2bXvfEMqZhuAlyA7gAdZvFxcaTXPsc/IOLrDipOi6SeyfiFAW09A7IPcQnsOlAaxA+cA71CWXXXk0HaKL0CTRYR2b/ikPSax1z2rIyjmaeo58NbHED9ezjNo8XBh7Ln2iD/YaMuUMChSmBX1Z5eROFD6EhilNYWzg84="
 
 # matrix:
 #   include:
