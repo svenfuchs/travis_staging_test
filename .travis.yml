@@ -1,13 +1,14 @@
-language: objective-c
+language: node_js
+
+os: osx
+
+node_js: 8
+
+xcode_image: xcode8.1
 
 install: skip
 
 script: env
-
-addons:
-  sauce_connect:
-    username: "Your Sauce Labs username"
-    access_key: "Your Sauce Labs access key"
 
 
 # matrix:
