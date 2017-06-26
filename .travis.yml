@@ -4,6 +4,12 @@ install: nvm install 4
 
 script: env
 
+addons:
+  apt:
+    sources:
+      - ubuntu-toolchain-r-test
+    packages:
+      - g++-4.8
 matrix:
   include:
     - sudo: false
