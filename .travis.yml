@@ -1,17 +1,14 @@
-language: python
-
-install: skip
-
-script: skip
-
-python:
-  - pypy
-  - pypy3
-
-sudo: false
-
+language: generic
 dist: trusty
+sudo: required
+install: true
+script: env
 
+deploy:
+  provider: script
+  script: echo true
+  on:
+    all_branches: true
 # matrix:
 #   include:
 #     - sudo: false
