@@ -1,10 +1,8 @@
 language: node_js
+os: osx
 node_js:
   - '8'
-  - '6'
 
-dist: trusty
-sudo: false
 script: skip
 
 # matrix:
