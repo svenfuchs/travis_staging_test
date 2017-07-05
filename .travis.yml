@@ -5,6 +5,7 @@ node_js:
 
 dist: trusty
 sudo: false
+install: npm install
 script: skip
 
 # matrix:
