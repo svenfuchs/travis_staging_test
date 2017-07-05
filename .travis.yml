@@ -1,14 +1,12 @@
-language: generic
-dist: trusty
-sudo: required
-install: true
-script: env
+language: node_js
+node_js:
+  - '8'
+  - '6'
 
-deploy:
-  provider: script
-  script: echo true
-  on:
-    all_branches: true
+dist: trusty
+sudo: false
+script: skip
+
 # matrix:
 #   include:
 #     - sudo: false
