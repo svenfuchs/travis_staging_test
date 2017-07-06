@@ -1,5 +1,8 @@
 language: elm
 
+node_js:
+  - '8'
+
 elm:
   - latest
   - 1.1.0
