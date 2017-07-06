@@ -2,6 +2,7 @@ language: elm
 
 node_js:
   - '8'
+  - '7'
 
 elm:
   - latest
