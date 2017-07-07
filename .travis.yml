@@ -8,19 +8,22 @@ script:
   - cat ~/build.sh
 
 deploy:
-  - provider: script
-    edge:
-      source: travis-ci/dpl
-    script: echo "foo"
-  - provider: script
-    edge:
-      source: travis-ci/dpl
-    script: echo "bar"
+  - provider: BinTray
+    username: solvingj
+    api_key:
+       secure: ebQ+n7tSPtW4Ou+GAbqv5pQZDtSMXq5xNGNvoGH7651g7bY0tOK5st1LWLo9Kept
+    override: true
+    subject: solvingj
+    repo: public-generic
+    package: "%APPVEYOR_PROJECT_NAME%"
+    version: "%APPVEYOR_REPO_TAG_NAME%"
+    publish: true
+    explode: false
 
 notifications:
   email: false
-  slack:
-    rooms:
-      - secure: "lJvygEEwbvbTua6vhOQCgg/voA7iH9sgm6yj9pC9fnYBf++8DWbyyM3sUB3ZIBaeqUlwiEXmn5HjgQlzB1+JTHPtOJtd05m72kOOSEIcXqcLK3Of51E4fEzjrAZ4x/nJQeIIrUzpnlVrSpgFkCP1qNWq1AV+miSjoFFbTn2v7hA="
-    template:
-       - "Build <%{build_url}|#%{build_number}> (<%{compare_url}|%{commit}>) of %{repository}@%{branch} by %{author} %{result} in %{duration} (elapsed time: %{elapsed_time}) subject: %{commit_subject} message: %{commit_message}"
+  # slack:
+  #   rooms:
+  #     - secure: "lJvygEEwbvbTua6vhOQCgg/voA7iH9sgm6yj9pC9fnYBf++8DWbyyM3sUB3ZIBaeqUlwiEXmn5HjgQlzB1+JTHPtOJtd05m72kOOSEIcXqcLK3Of51E4fEzjrAZ4x/nJQeIIrUzpnlVrSpgFkCP1qNWq1AV+miSjoFFbTn2v7hA="
+  #   template:
+  #      - "Build <%{build_url}|#%{build_number}> (<%{compare_url}|%{commit}>) of %{repository}@%{branch} by %{author} %{result} in %{duration} (elapsed time: %{elapsed_time}) subject: %{commit_subject} message: %{commit_message}"
