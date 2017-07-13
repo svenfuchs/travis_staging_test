@@ -1,41 +1,36 @@
-dist: trusty
-sudo: required
-
-cache: bundler
-
 language: ruby
 
-rvm: 2.3.3
+install: skip
+
+script:
+- eval `ssh-agent -s`
 
 matrix:
   include:
-  - group: stable
-    env: GROUP=stable
-  - group: edge
-    env: GROUP=edge
-
-install: true
-
-script:
-- true
-
-# matrix:
-#   include:
-#     - sudo: false
-#       dist: precise
-#       env: DIST=precise STACK=EC2
-#     - sudo: required
-#       dist: precise
-#       env: DIST=precise STACK=GCE
-#     - sudo: false
-#       dist: trusty
-#       env: DIST=trusty STACK=EC2
-#     - sudo: required
-#       dist: trusty
-#       env: DIST=trusty STACK=GCE
+    # - sudo: false
+    #   dist: precise
+    #   env: DIST=precise STACK=EC2
+    # - sudo: required
+    #   dist: precise
+    #   env: DIST=precise STACK=GCE
+    - sudo: false
+      dist: trusty
+      env: DIST=trusty STACK=EC2
+    # - sudo: required
+    #   dist: trusty
+    #   env: DIST=trusty STACK=GCE
+    - sudo: false
+      dist: trusty
+      group: edge
+      env: DIST=trusty STACK=EC2 GROUP=edge
+    # - sudo: required
+    #   dist: trusty
+    #   group: edge
+    #   env: DIST=trusty STACK=GCE GROUP=edge
     # - os: osx
-    #   osx_image: xcode8.3
 
+notifications:
+  email: false
   #  webhooks: http://requestb.in/rin6s6ri
   #slack:
   #  rooms:
@@ -47,5 +42,3 @@ script:
   #global:
   #  secure: Bw9BTZqRQ0hlJBInFMxMSQGdc8nMvFxfQQZNxbzrLCgNWZ8ow0sjG9oItOe/Otl7raapmZh+OZsqWAzqvfCfTyueqUaMfqhzB0hzjR8jxfpQP/99db2Ok/s2hOttcfyAKanlbQT7Cvy6SRv4VoFclAY8s6q8Migr8bCWkUjlQU=
 
-notifications:
-  email: false
