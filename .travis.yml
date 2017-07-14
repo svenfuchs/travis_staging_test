@@ -2,8 +2,7 @@ language: ruby
 
 install: skip
 
-script:
-- eval `ssh-agent -s`
+script: skip
 
 matrix:
   include:
@@ -19,15 +18,18 @@ matrix:
     # - sudo: required
     #   dist: trusty
     #   env: DIST=trusty STACK=GCE
-    - sudo: false
-      dist: trusty
-      group: edge
-      env: DIST=trusty STACK=EC2 GROUP=edge
+    # - sudo: false
+    #   dist: trusty
+    #   group: edge
+    #   env: DIST=trusty STACK=EC2 GROUP=edge
     # - sudo: required
     #   dist: trusty
     #   group: edge
     #   env: DIST=trusty STACK=GCE GROUP=edge
     # - os: osx
+
+addons:
+  apt: tru
 
 notifications:
   email: false
