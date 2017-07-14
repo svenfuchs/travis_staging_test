@@ -29,7 +29,7 @@ matrix:
     # - os: osx
 
 addons:
-  apt: tru
+  artifacts: tru
 
 notifications:
   email: false
