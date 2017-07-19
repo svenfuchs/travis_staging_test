@@ -5,7 +5,7 @@ install: skip
 script: skip
 
 addons:
-  - rethinkdb: 2.3.5
+  rethinkdb: 2.3.5
 matrix:
   include:
     # - sudo: false
