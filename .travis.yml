@@ -2,11 +2,10 @@ language: ruby
 
 install: skip
 
-script: mysql -e "select 1;"
+script: skip
 
-services:
-  - mysql
-
+addons:
+  - rethinkdb: 2.3.5
 matrix:
   include:
     # - sudo: false
