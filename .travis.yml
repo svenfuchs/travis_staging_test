@@ -2,7 +2,10 @@ language: ruby
 
 install: skip
 
-script: skip
+script: mysql -e "select 1;"
+
+services:
+  - mysql
 
 matrix:
   include:
@@ -27,9 +30,6 @@ matrix:
     #   group: edge
     #   env: DIST=trusty STACK=GCE GROUP=edge
     # - os: osx
-
-addons:
-  artifacts: tru
 
 notifications:
   email: false
