@@ -1,12 +1,27 @@
-language: julia
+language: android
+dist: trusty
+sudo: required
 
-julia: '0.5'
+android:
+  components:
+    - tools
+    - platform-tools
+    - tools
+    
+    - android-25
+    
+    - build-tools-25.0.2
+    - extra
+    - extra-google-m2repository
+    - extra-android-m2repository
+    - extra-android-support
+
+jdk: oraclejdk8
 
 install: skip
 
 script:
-  - julia -e 'Pkg.clone(pwd())'
-  - julia -e 'Pkg.build("HDF5")'
+  - sdkmanager
 
 matrix:
   include:
@@ -16,9 +31,9 @@ matrix:
     # - sudo: required
     #   dist: precise
     #   env: DIST=precise STACK=GCE
-    - sudo: false
-      dist: trusty
-      env: DIST=trusty STACK=EC2
+    # - sudo: false
+    #   dist: trusty
+    #   env: DIST=trusty STACK=EC2
     # - sudo: required
     #   dist: trusty
     #   env: DIST=trusty STACK=GCE
