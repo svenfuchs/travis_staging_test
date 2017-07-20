@@ -7,9 +7,9 @@ android:
     - tools
     - platform-tools
     - tools
-    
+
     - android-25
-    
+
     - build-tools-25.0.2
     - extra
     - extra-google-m2repository
@@ -21,7 +21,7 @@ jdk: oraclejdk8
 install: skip
 
 script:
-  - sdkmanager
+  - sdkmanager --help
 
 matrix:
   include:
