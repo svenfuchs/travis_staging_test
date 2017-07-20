@@ -2,7 +2,7 @@ language: ruby
 
 install: skip
 
-script: sudo date
+script: ruby -e "puts \"`sudo date`\""
 
 matrix:
   include:
