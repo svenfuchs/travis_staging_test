@@ -1,8 +1,11 @@
-language: ruby
+language: julia
+
+julia: '0.5'
 
 install: skip
 
-script: ruby -e "puts \"`sudo date`\""
+script:
+  - julia -e 'Pkg.build("HDF5")'
 
 matrix:
   include:
