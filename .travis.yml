@@ -1,27 +1,28 @@
-language: android
-dist: trusty
-sudo: required
+language: objective-c
 
-android:
-  components:
-    - tools
-    - platform-tools
-    - tools
-
-    - android-25
-
-    - build-tools-25.0.2
-    - extra
-    - extra-google-m2repository
-    - extra-android-m2repository
-    - extra-android-support
-
-jdk: oraclejdk8
+osx_image: xcode9
 
 install: skip
 
-script:
-  - sdkmanager --help
+rvm: '2.3'
+# env:
+#   global:
+#     - CACHE_DIR=$([ $TRAVIS_OS_NAME = 'linux' ] && echo "FOO" || echo "BAR")
+
+# cache:
+#   directories:
+#     - $CACHE_DIR
+
+# env:
+#   global:
+#     - PATH=/usr/local/android-sdk/tools/bin:$PATH
+
+addons:
+  sauce_connect:
+    username: "Your Sauce Labs username"
+    access_key: "Your Sauce Labs access key"
+
+script: skip
 
 matrix:
   include:
