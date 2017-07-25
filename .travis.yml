@@ -1,6 +1,6 @@
-language: erlang
+language: python
 
-otp_release: '19.2'
+python: pypy
 
 install: skip
 
