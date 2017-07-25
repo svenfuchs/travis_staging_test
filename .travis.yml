@@ -1,10 +1,9 @@
-language: objective-c
+language: php
 
-osx_image: xcode9
+php: '7.2'
 
 install: skip
 
-rvm: '2.3'
 # env:
 #   global:
 #     - CACHE_DIR=$([ $TRAVIS_OS_NAME = 'linux' ] && echo "FOO" || echo "BAR")
@@ -17,11 +16,6 @@ rvm: '2.3'
 #   global:
 #     - PATH=/usr/local/android-sdk/tools/bin:$PATH
 
-addons:
-  sauce_connect:
-    username: "Your Sauce Labs username"
-    access_key: "Your Sauce Labs access key"
-
 script: skip
 
 matrix:
@@ -32,9 +26,9 @@ matrix:
     # - sudo: required
     #   dist: precise
     #   env: DIST=precise STACK=GCE
-    # - sudo: false
-    #   dist: trusty
-    #   env: DIST=trusty STACK=EC2
+    - sudo: false
+      dist: trusty
+      env: DIST=trusty STACK=EC2
     # - sudo: required
     #   dist: trusty
     #   env: DIST=trusty STACK=GCE
