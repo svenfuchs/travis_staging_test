@@ -1,6 +1,18 @@
-language: node_js
+language: elixir
 
-node_js: '6'
+elixir:
+  - '1.3'
+  - '1.4'
+  - '1.5'
+
+otp_release:
+  - '18.0'
+  - '19.3'
+  - '20.0'
+
+sudo: false
+
+dist: trusty
 
 install: skip
 
@@ -17,31 +29,31 @@ install: skip
 #     - PATH=/usr/local/android-sdk/tools/bin:$PATH
 
 script:
- - nvm run 6 npm run lambda:publish
+ - elixir --version
 
-matrix:
-  include:
-    # - sudo: false
-    #   dist: precise
-    #   env: DIST=precise STACK=EC2
-    # - sudo: required
-    #   dist: precise
-    #   env: DIST=precise STACK=GCE
-    - sudo: false
-      dist: trusty
-      env: DIST=trusty STACK=EC2
-    # - sudo: required
-    #   dist: trusty
-    #   env: DIST=trusty STACK=GCE
-    # - sudo: false
-    #   dist: trusty
-    #   group: edge
-    #   env: DIST=trusty STACK=EC2 GROUP=edge
-    # - sudo: required
-    #   dist: trusty
-    #   group: edge
-    #   env: DIST=trusty STACK=GCE GROUP=edge
-    # - os: osx
+# matrix:
+#   include:
+#     - sudo: false
+#       dist: precise
+#       env: DIST=precise STACK=EC2
+#     - sudo: required
+#       dist: precise
+#       env: DIST=precise STACK=GCE
+#     - sudo: false
+#       dist: trusty
+#       env: DIST=trusty STACK=EC2
+#     - sudo: required
+#       dist: trusty
+#       env: DIST=trusty STACK=GCE
+#     - sudo: false
+#       dist: trusty
+#       group: edge
+#       env: DIST=trusty STACK=EC2 GROUP=edge
+#     - sudo: required
+#       dist: trusty
+#       group: edge
+#       env: DIST=trusty STACK=GCE GROUP=edge
+#     - os: osx
 
 notifications:
   email: false
