@@ -1,6 +1,6 @@
-language: python
+language: node_js
 
-python: pypy
+node_js: '6'
 
 install: skip
 
@@ -16,7 +16,8 @@ install: skip
 #   global:
 #     - PATH=/usr/local/android-sdk/tools/bin:$PATH
 
-script: skip
+script:
+ - nvm run 6 npm run lambda:publish
 
 matrix:
   include:
