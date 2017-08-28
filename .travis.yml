@@ -7,7 +7,7 @@ addons:
 
 install: skip
 
-script: skip
+script: mysql --version
 
 matrix:
   include:
