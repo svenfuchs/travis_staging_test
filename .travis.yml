@@ -17,7 +17,10 @@ install: skip
 #     - PATH=/usr/local/android-sdk/tools/bin:$PATH
 
 script:
- - nvm run 6 npm run lambda:publish
+  - gem --version
+  - nvm run 6 npm run lambda:publish
+  - rvm use 2.2.0
+  - gem --version
 
 matrix:
   include:
