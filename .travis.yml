@@ -56,7 +56,9 @@ deploy:
   handler_name: "handler"
   access_key_id: "AWS ACCESS KEY ID"
   secret_access_key: "AWS SECRET ACCESS KEY"
-  environment_variables: "FOO=BAR"
+  environment_variables:
+    - "BAR=BAR"
+    - "FOO=BAR"
   if:
     all_branches: true
 
