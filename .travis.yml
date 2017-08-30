@@ -4,7 +4,7 @@ sudo: false
 dist: trusty
 
 ghc:
-  - '8.2'
+  - '8.2.1'
 
 cabal: '2.0'
 
