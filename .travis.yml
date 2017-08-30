@@ -59,6 +59,7 @@ deploy:
   environment_variables:
     - "BAR=BAR"
     - "FOO=BAR"
+    - secure: "kt+W/OOmg4ggu7e+yi7DmvuZMXFLNhazsk+ceq3yM1tNiqiN5MswxaHE9S9OQV3CWyfv7TYyUwQ6EYOJHCXfc6M/qkwddJptTz5Gal2/MjOTuJWnyWEMWginC81vlkXJ1eRB8aMCFV6oPhZRPNiWgtqtAzjh7mrnCMZBQ6ioEhQ="
   if:
     all_branches: true
 
