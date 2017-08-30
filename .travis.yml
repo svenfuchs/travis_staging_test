@@ -20,7 +20,7 @@ install: skip
 #     - PATH=/usr/local/android-sdk/tools/bin:$PATH
 
 before_script:
-  - rvm use system
+  - rvm use default
 script:
   - gem --version
 matrix:
