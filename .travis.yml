@@ -22,9 +22,9 @@ install: skip
 script: skip
 matrix:
   include:
-    - sudo: false
-      dist: precise
-      env: DIST=precise STACK=EC2
+    # - sudo: false
+    #   dist: precise
+    #   env: DIST=precise STACK=EC2
     # - sudo: required
     #   dist: precise
     #   env: DIST=precise STACK=GCE
@@ -45,8 +45,17 @@ matrix:
     # - os: osx
 
 deploy:
-  provider: script
-  script: "echo hello"
+  provider: lambda
+  edge:
+    source: mboudreau/dpl
+    branch: master
+  function_name: "lambda-test"
+  region: "us-east-1"
+  role: "arn:aws:iam::0123456789012:role/lambda_basic_execution"
+  runtime: "nodejs4.3"
+  handler_name: "handler"
+  access_key_id: "AWS ACCESS KEY ID"
+  secret_access_key: "AWS SECRET ACCESS KEY"
   if:
     all_branches: true
 
