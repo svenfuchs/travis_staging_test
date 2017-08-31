@@ -7,6 +7,10 @@ install: skip
 script:
   - gem --version
 
+addons:
+  mariadb:
+    version: '10.2'
+
 # matrix:
 #   include:
 #     - sudo: false
