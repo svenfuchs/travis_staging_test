@@ -36,8 +36,8 @@ deploy:
    secure: "JFN13iCV/XC1Jn9nwZ0/fjc18OB+JobYQcZQWFNRP2geAfrfvTb1FcGumMXsa/sQjyuTT7yCjPZtToSk6kqXAIlVq08OXLL5nXz0fiIp/dh6aRrOYn6Ddg8P9Vi05a+VFgWnd280VgeFIP+X8d6TuXKiyPLXVNsr7oCdU67Swj4="
  file: "Rakefile"
  skip_cleanup: true
- on:
-   all_branches: true
+ # on:
+ #   all_branches: true
 
 notifications:
   email: false
