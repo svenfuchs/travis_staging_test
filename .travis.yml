@@ -1,10 +1,10 @@
 language: haskell
 
 sudo: false
-dist: trusty
+dist: precise
 
 ghc:
-  - '8.2.1'
+  - '7.10.3'
 
 cabal: '2.0'
 
