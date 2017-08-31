@@ -10,6 +10,8 @@ script:
 addons:
   mariadb:
     version: '10.2'
+    if:
+      branch: 'ruby'
 
 # matrix:
 #   include:
