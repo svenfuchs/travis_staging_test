@@ -9,7 +9,7 @@ android:
   packages:
     - "tools"
     - "build-tools;26.0.1"
-    - "extras;android;m2-repository"
+    - "extras;android;m2repository"
 
 # env:
 #   global:
