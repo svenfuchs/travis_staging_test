@@ -24,7 +24,8 @@ android:
 #     - PATH=/usr/local/android-sdk/tools/bin:$PATH
 
 before_script: skip
-script: skip
+script: which avdmanager
+
 # matrix:
 #   include:
 #     - sudo: false
