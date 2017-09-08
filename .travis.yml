@@ -4,12 +4,12 @@ sudo: false
 
 install: skip
 
-rvm: '2.3'
+rvm: '1.9.3'
 
 script:
-  - rvm use 2.3 --install --binary --fuzzy
+  - bundle --version
   - rvm use 2.4.1 --install --binary --fuzzy
-  - rvm use 2.4.1 --install --binary --fuzzy
+  - bundle --version
   - cat ~/.rvm/hooks/after_use || true
 
 # matrix:
