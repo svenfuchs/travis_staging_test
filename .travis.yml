@@ -4,13 +4,11 @@ sudo: false
 
 install: skip
 
-rvm: '1.9.3'
+rvm:
+  - '1.9.3'
+  - '2.2'
 
-script:
-  - bundle --version
-  - rvm use 2.4.1 --install --binary --fuzzy
-  - bundle --version
-  - cat ~/.rvm/hooks/after_use || true
+script: skip
 
 # matrix:
 #   include:
@@ -35,6 +33,10 @@ script:
 #       group: edge
 #       env: DIST=trusty STACK=GCE GROUP=edge
     # - os: osx
+
+deploy:
+  provider: script
+  script: echo yay
 # deploy:
 #  provider: releases
 #  api_key:
