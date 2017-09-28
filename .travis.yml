@@ -7,7 +7,8 @@ install: skip
 rvm:
   - '2.2'
 
-script: sudo echo foo
+script:
+  - bash stuff
 
 # matrix:
 #   include:
