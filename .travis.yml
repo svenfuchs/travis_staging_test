@@ -7,7 +7,7 @@ install: skip
 rvm:
   - '2.2'
 
-script: skip
+script: echo $(travis_internal_ruby)
 # matrix:
 #   include:
 #     - sudo: false
