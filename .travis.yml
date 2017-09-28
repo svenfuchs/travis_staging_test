@@ -5,7 +5,7 @@ sudo: false
 install: skip
 
 rvm:
-  - '2.2'
+  - '1.9'
 
 script: echo $(travis_internal_ruby)
 # matrix:
@@ -34,7 +34,7 @@ script: echo $(travis_internal_ruby)
 
 deploy:
   provider: script
-  script: ruby -v
+  script: rvm use $TRAVIS_RUBY_VERSION do script.rb
   on:
     all_branches: true
 # deploy:
