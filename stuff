@@ -1,5 +1,6 @@
 set -v
 
+ls -l `which ping`
 ping -c 3 8.8.8.8
 
 sudo echo foo
