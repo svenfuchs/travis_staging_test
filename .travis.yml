@@ -8,7 +8,7 @@ rvm:
   - '2.2'
 
 script:
-  - bash stuff
+  - ping -c 3 8.8.8.8
 
 # matrix:
 #   include:
