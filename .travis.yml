@@ -9,6 +9,7 @@ rvm:
 
 script:
   - df -h
+  - ls -l `which ping`
   - mount
   - bash stuff
 
