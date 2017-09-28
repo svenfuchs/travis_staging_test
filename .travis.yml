@@ -4,6 +4,8 @@ sudo: false
 
 install: skip
 
+script: skip
+
 rvm:
   - '1.9'
 
