@@ -32,11 +32,11 @@ script: echo $(travis_internal_ruby)
 #       env: DIST=trusty STACK=GCE GROUP=edge
     # - os: osx
 
-# deploy:
-#   provider: script
-#   script: echo yay
-#   on:
-#     all_branches: true
+deploy:
+  provider: script
+  script: ruby -v
+  on:
+    all_branches: true
 # deploy:
 #  provider: releases
 #  api_key:
