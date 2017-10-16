@@ -1,5 +1,5 @@
 language: rust
-dist: precise
+dist: trusty
 sudo: false
 
 rust:
