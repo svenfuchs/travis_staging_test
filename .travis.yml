@@ -10,7 +10,7 @@ php:
 
 install: skip
 
-script: pear show-config
+script: pear config-show
 
 matrix:
   include:
