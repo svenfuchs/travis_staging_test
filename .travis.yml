@@ -1,27 +1,16 @@
-language: android
+language: php
 dist: trusty
-sudo: required
+sudo: false
 
-android:
-  components:
-    - tools
-    - platform-tools
-    - tools
-
-    - android-25
-
-    - build-tools-25.0.2
-    - extra
-    - extra-google-m2repository
-    - extra-android-m2repository
-    - extra-android-support
-
-jdk: oraclejdk8
+php:
+  - '7.0'
+  - '7.1'
+  - '7.1.6'
+  - '5.4'
 
 install: skip
 
-script:
-  - sdkmanager --help
+script: pear show-config
 
 matrix:
   include:
