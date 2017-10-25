@@ -5,8 +5,7 @@ dist: precise
 sudo: required
 
 php:
-  - '5.2'
-  - '5.3'
+  - '5.3.3'
 
 install: skip
 
