@@ -1,16 +1,23 @@
 language: php
-dist: trusty
-sudo: false
+
+dist: precise
+
+sudo: required
 
 php:
-  - '7.0'
-  - '7.1'
-  - '7.1.6'
-  - '5.4'
+  - '5.2'
+  - '5.3'
 
 install: skip
 
-script: pear config-show
+# env:
+#   global:
+#     - CACHE_DIR=$([ $TRAVIS_OS_NAME = 'linux' ] && echo "FOO" || echo "BAR")
+
+# cache:
+#   directories:
+#     - $CACHE_DIR
+script: skip
 
 matrix:
   include:
