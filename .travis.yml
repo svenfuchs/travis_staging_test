@@ -1,7 +1,6 @@
 language: ruby
 dist: trusty
 sudo: false
-
 install: skip
 
 rvm:
