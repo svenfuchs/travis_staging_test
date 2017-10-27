@@ -5,6 +5,8 @@ install: skip
 
 rvm:
   - '1.9'
+  - '2.2'
+  - '2.3'
 
 script: skip
 # matrix:
@@ -31,11 +33,11 @@ script: skip
 #       env: DIST=trusty STACK=GCE GROUP=edge
     # - os: osx
 
-# deploy:
-#   provider: script
-#   script: rvm use $TRAVIS_RUBY_VERSION do script.rb
-#   on:
-#     all_branches: true
+deploy:
+  provider: script
+  script: echo $(travis_internal_ruby)
+  on:
+    all_branches: true
 # deploy:
 #  provider: releases
 #  api_key:
