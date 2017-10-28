@@ -34,6 +34,7 @@ script: skip
     # - os: osx
 
 deploy:
+  edge: true
   provider: script
   script: echo $(travis_internal_ruby)
   on:
