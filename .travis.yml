@@ -3,35 +3,34 @@ dist: trusty
 sudo: false
 install: skip
 
-rvm:
-  - '1.9'
-  - '2.2'
-  - '2.3'
-
-script: skip
-# matrix:
-#   include:
-#     - sudo: false
-#       dist: precise
-#       env: DIST=precise STACK=EC2
-#     - sudo: required
-#       dist: precise
-#       env: DIST=precise STACK=GCE
-#     - sudo: false
-#       dist: trusty
-#       env: DIST=trusty STACK=EC2
-#     - sudo: required
-#       dist: trusty
-#       env: DIST=trusty STACK=GCE
-#     - sudo: false
-#       dist: trusty
-#       group: edge
-#       env: DIST=trusty STACK=EC2 GROUP=edge
-#     - sudo: required
-#       dist: trusty
-#       group: edge
-#       env: DIST=trusty STACK=GCE GROUP=edge
-    # - os: osx
+script: echo $(travis_internal_ruby)
+matrix:
+  include:
+    - sudo: required
+      dist: precise
+      env: DIST=precise STACK=GCE
+    - sudo: false
+      dist: trusty
+      env: DIST=trusty STACK=EC2
+    - sudo: required
+      dist: trusty
+      env: DIST=trusty STACK=GCE
+    - os: osx
+      osx_image: xcode9.1
+    - os: osx
+      osx_image: xcode9
+    - os: osx
+      osx_image: xcode8.3
+    - os: osx
+      osx_image: xcode8.2
+    - os: osx
+      osx_image: xcode8.1
+    - os: osx
+      osx_image: xcode8
+    - os: osx
+      osx_image: xcode7.3
+    - os: osx
+      osx_image: xcode6.4
 
 deploy:
   edge: true
