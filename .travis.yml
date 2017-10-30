@@ -3,7 +3,9 @@ dist: trusty
 sudo: false
 install: skip
 
-cache: bundler
+cache:
+  bundler: true
+  edge: true
 
 script: skip
 matrix:
