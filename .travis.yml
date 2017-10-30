@@ -3,41 +3,43 @@ dist: trusty
 sudo: false
 install: skip
 
-script: echo $(travis_internal_ruby)
+cache: bundler
+
+script: skip
 matrix:
   include:
-    - sudo: required
-      dist: precise
-      env: DIST=precise STACK=GCE
-    - sudo: false
-      dist: trusty
-      env: DIST=trusty STACK=EC2
-    - sudo: required
-      dist: trusty
-      env: DIST=trusty STACK=GCE
-    - os: osx
-      osx_image: xcode9.1
-    - os: osx
-      osx_image: xcode9
-    - os: osx
-      osx_image: xcode8.3
-    - os: osx
-      osx_image: xcode8.2
-    - os: osx
-      osx_image: xcode8.1
-    - os: osx
-      osx_image: xcode8
+    # - sudo: required
+    #   dist: precise
+    #   env: DIST=precise STACK=GCE
+    # - sudo: false
+    #   dist: trusty
+    #   env: DIST=trusty STACK=EC2
+    # - sudo: required
+    #   dist: trusty
+    #   env: DIST=trusty STACK=GCE
+    # - os: osx
+    #   osx_image: xcode9.1
+    # - os: osx
+    #   osx_image: xcode9
+    # - os: osx
+    #   osx_image: xcode8.3
+    # - os: osx
+    #   osx_image: xcode8.2
+    # - os: osx
+    #   osx_image: xcode8.1
+    # - os: osx
+    #   osx_image: xcode8
     - os: osx
       osx_image: xcode7.3
-    - os: osx
-      osx_image: xcode6.4
+    # - os: osx
+    #   osx_image: xcode6.4
 
-deploy:
-  edge: true
-  provider: script
-  script: echo $(travis_internal_ruby)
-  on:
-    all_branches: true
+# deploy:
+#   edge: true
+#   provider: script
+#   script: echo $(travis_internal_ruby)
+#   on:
+#     all_branches: true
 # deploy:
 #  provider: releases
 #  api_key:
