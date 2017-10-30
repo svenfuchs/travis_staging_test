@@ -7,7 +7,9 @@ before_script: |
     function travis_internal_ruby() {
       echo "1.9"
     }
-script: echo $(travis_internal_ruby)
+script:
+  - echo $(travis_internal_ruby)
+  - rvm use $(travis_internal_ruby) --install --binary --fuzzy
 matrix:
   include:
     - sudo: required
