@@ -20,7 +20,7 @@ script:
   - echo "Host 127.0.0.1" >> /home/travis/.ssh/config
   - echo "  StrictHostKeyChecking no" >> /home/travis/.ssh/config
   - chmod g-rw,o-rw /home/travis/.ssh/*
-  - ssh -f 127.0.01 sleep 1
+  - ssh -f 127.0.0.1 sleep 1
   - sleep 2
 
 
