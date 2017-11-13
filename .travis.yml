@@ -14,6 +14,7 @@ install: skip
 #   directories:
 #     - $CACHE_DIR
 script:
+  - cat /etc/hosts
   - ssh-keygen -t rsa -N '' -f ~/.ssh/id_rsa
   - cat ~/.ssh/id_rsa.pub >> ~/.ssh/authorized_keys
   - echo "Host localhost" >> /home/travis/.ssh/config
