@@ -17,10 +17,10 @@ script:
   - cat /etc/hosts
   - ssh-keygen -t rsa -N '' -f ~/.ssh/id_rsa
   - cat ~/.ssh/id_rsa.pub >> ~/.ssh/authorized_keys
-  - echo "Host localhost" >> /home/travis/.ssh/config
+  - echo "Host 127.0.0.1" >> /home/travis/.ssh/config
   - echo "  StrictHostKeyChecking no" >> /home/travis/.ssh/config
   - chmod g-rw,o-rw /home/travis/.ssh/*
-  - ssh -f localhost sleep 1
+  - ssh -f 127.0.01 sleep 1
   - sleep 2
 
 
