@@ -19,7 +19,7 @@ script:
   - echo "Host localhost" >> /home/travis/.ssh/config
   - echo "  StrictHostKeyChecking no" >> /home/travis/.ssh/config
   - chmod g-rw,o-rw /home/travis/.ssh/*
-  - ssh -f sleep 1
+  - ssh -f localhost sleep 1
   - sleep 2
 
 
