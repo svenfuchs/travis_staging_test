@@ -12,7 +12,7 @@ script:
   - echo "  StrictHostKeyChecking no" >> /home/travis/.ssh/config
   - echo "  Ciphers aes128-ctr,aes192-ctr,aes256-ctr,arcfour256,arcfour128,aes128-cbc,3des-cbc" >> /home/travis/.ssh/config
   - chmod g-rw,o-rw /home/travis/.ssh/*
-  - ssh -f -vvv -c aes128-ctr 127.0.0.1 sleep; echo -e "\n"; sudo cat /var/log/auth.log
+  - ssh -f -vvv -c aes128-ctr 127.0.0.1 sleep 1; echo -e "\n"; sudo cat /var/log/auth.log
   - sleep 2
 
 matrix:
