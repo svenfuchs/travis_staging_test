@@ -3,7 +3,9 @@ dist: trusty
 sudo: false
 install: skip
 
-script: cat /etc/hosts
+script:
+  - cat /etc/hosts
+  - cat ~/build.sh
 matrix:
   include:
     - sudo: required
