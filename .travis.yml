@@ -5,7 +5,6 @@ install: skip
 
 script:
   - cat /etc/hosts
-  - cat ~/build.sh
 matrix:
   include:
     - sudo: required
