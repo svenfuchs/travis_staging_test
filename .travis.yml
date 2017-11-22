@@ -1,27 +1,15 @@
-language: android
+language: csharp
+mono:
+  - latest
+  - 3.12.0
+  - 3.10.0
+
 dist: trusty
-sudo: required
-
-android:
-  components:
-    - tools
-    - platform-tools
-    - tools
-
-    - android-25
-
-    - build-tools-25.0.2
-    - extra
-    - extra-google-m2repository
-    - extra-android-m2repository
-    - extra-android-support
-
-jdk: oraclejdk8
+sudo: false
 
 install: skip
 
-script:
-  - sdkmanager --help
+script: skip
 
 matrix:
   include:
