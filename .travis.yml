@@ -5,13 +5,20 @@ install: skip
 
 script: skip
 
+cache:
+  bundler: true
+  name: shared
+
+stages:
+  - set up cache
+  - test
 rvm:
   - '2.4'
   - '2.3'
   
 jobs:
   include:
-    - name: set up cache
+    - stage: set up cache
     
 # matrix:
   # include:
