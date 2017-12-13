@@ -3,40 +3,26 @@ dist: trusty
 sudo: false
 install: skip
 
-script: skip
+script:
+script: echo $PATH | tr ':' "\n" | sort
 
-cache:
-  bundler: true
-  name: shared
-
-stages:
-  - set up cache
-  - test
-rvm:
-  - '2.4'
-  - '2.3'
-  
-jobs:
+matrix:
   include:
-    - stage: set up cache
-    
-# matrix:
-  # include:
     # - sudo: required
     #   dist: precise
     #   env: DIST=precise STACK=GCE
-    # - sudo: false
-    #   dist: trusty
-    #   env: DIST=trusty STACK=EC2
+    - sudo: false
+      dist: trusty
+      env: DIST=trusty STACK=EC2
     # - sudo: required
     #   dist: trusty
-    #  env: DIST=trusty STACK=GCE
+    #   env: DIST=trusty STACK=GCE
     # - os: osx
     #   osx_image: xcode9.1
     # - os: osx
     #   osx_image: xcode9
-    # - os: osx
-    #   osx_image: xcode8.3
+    - os: osx
+      osx_image: xcode8.3
     # - os: osx
     #   osx_image: xcode8.2
     # - os: osx
