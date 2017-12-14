@@ -3,8 +3,6 @@ dist: trusty
 sudo: false
 install: skip
 
-script: skip
-
 services:
   - rabbitmq
 
@@ -18,8 +16,11 @@ addons:
     packages:
       - esl-erlang=1:20.1
 
-before_install:
+script:
   - sudo -E apt-get -yq --no-install-suggests --no-install-recommends --force-yes install rabbitmq-server=3.7.0-1
+  - env | sort
+  - cat /opt/jdk_switcher/jdk_switcher.sh
+  - cat /var/lib/dpkg/info/rabbitmq-server.postinst
 
 matrix:
   include:
@@ -49,9 +50,6 @@ matrix:
     # - os: osx
     #   osx_image: xcode6.4
 
-after_failure:
-  - env | sort
-  - cat /opt/jdk_switcher/jdk_switcher.sh
 # deploy:
 #   edge: true
 #   provider: script
