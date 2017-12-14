@@ -8,17 +8,25 @@ script: skip
 services:
   - rabbitmq
 
+addons:
+  apt:
+    sources:
+      - sourceline: deb https://dl.bintray.com/rabbitmq/debian trusty main
+        key_url: https://dl.bintray.com/rabbitmq/Keys/rabbitmq-release-signing-key.asc
+    packages:
+      - rabbitmq-server=3.7.0-1
+
 matrix:
   include:
     # - sudo: required
     #   dist: precise
     #   env: DIST=precise STACK=GCE
-    - sudo: false
-      dist: trusty
-      env: DIST=trusty STACK=EC2
-    # - sudo: required
+    # - sudo: false
     #   dist: trusty
-    #   env: DIST=trusty STACK=GCE
+    #   env: DIST=trusty STACK=EC2
+    - sudo: required
+      dist: trusty
+      env: DIST=trusty STACK=GCE
     # - os: osx
     #   osx_image: xcode9.1
     # - os: osx
