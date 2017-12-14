@@ -3,8 +3,10 @@ dist: trusty
 sudo: false
 install: skip
 
-script:
-script: echo $PATH | tr ':' "\n" | sort
+script: skip
+
+services:
+  - rabbitmq
 
 matrix:
   include:
@@ -21,8 +23,8 @@ matrix:
     #   osx_image: xcode9.1
     # - os: osx
     #   osx_image: xcode9
-    - os: osx
-      osx_image: xcode8.3
+    # - os: osx
+    #   osx_image: xcode8.3
     # - os: osx
     #   osx_image: xcode8.2
     # - os: osx
