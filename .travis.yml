@@ -11,9 +11,12 @@ services:
 addons:
   apt:
     sources:
+      - sourceline: deb https://packages.erlang-solutions.com/ubuntu trusty contrib
+        key_url: https://packages.erlang-solutions.com/ubuntu/erlang_solutions.asc
       - sourceline: deb https://dl.bintray.com/rabbitmq/debian trusty main
         key_url: https://dl.bintray.com/rabbitmq/Keys/rabbitmq-release-signing-key.asc
     packages:
+      - esl-erlang=1:20.1
       - rabbitmq-server=3.7.0-1
 
 matrix:
