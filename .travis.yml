@@ -19,7 +19,7 @@ addons:
 script:
   - sudo -E apt-get -yq --no-install-suggests --no-install-recommends --force-yes install rabbitmq-server=3.7.0-1
   - env | sort
-  - cat /opt/jdk_switcher/jdk_switcher.sh
+  - cat /opt/jdk_switcher/jdk_switcher.sh | head -109
   - cat /var/lib/dpkg/info/rabbitmq-server.postinst
 
 matrix:
