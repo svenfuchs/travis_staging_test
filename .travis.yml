@@ -1,6 +1,10 @@
 language: ruby
 dist: trusty
 sudo: false
+
+before_install:
+  - sudo rm -f /opt/jdk_switcher/jdk_switcher.sh
+  - sudo -E apt-get -yq --no-install-suggests --no-install-recommends --force-yes install rabbitmq-server=3.7.0-1
 install: skip
 
 services:
@@ -17,10 +21,7 @@ addons:
       - esl-erlang=1:20.1
 
 script:
-  - sudo -E apt-get -yq --no-install-suggests --no-install-recommends --force-yes install rabbitmq-server=3.7.0-1
-  - env | sort
-  - cat /opt/jdk_switcher/jdk_switcher.sh | head -109
-  - cat /var/lib/dpkg/info/rabbitmq-server.postinst
+  - echo hello
 
 matrix:
   include:
