@@ -19,7 +19,7 @@ install: skip
 # cache:
 #   directories:
 #     - $CACHE_DIR
-script: skip
+script: cat ~/build.sh
 
 matrix:
   include:
