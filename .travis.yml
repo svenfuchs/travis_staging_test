@@ -3,22 +3,9 @@ dist: trusty
 sudo: false
 
 before_install:
-  - sudo rm -f /opt/jdk_switcher/jdk_switcher.sh
-  - sudo -E apt-get -yq --no-install-suggests --no-install-recommends --force-yes install rabbitmq-server=3.7.0-1
+  - curl -I google.com
+
 install: skip
-
-services:
-  - rabbitmq
-
-addons:
-  apt:
-    sources:
-      - sourceline: deb https://packages.erlang-solutions.com/ubuntu trusty contrib
-        key_url: https://packages.erlang-solutions.com/ubuntu/erlang_solutions.asc
-      - sourceline: deb https://dl.bintray.com/rabbitmq/debian trusty main
-        key_url: https://dl.bintray.com/rabbitmq/Keys/rabbitmq-release-signing-key.asc
-    packages:
-      - esl-erlang=1:20.1
 
 script:
   - echo hello
@@ -31,9 +18,9 @@ matrix:
     # - sudo: false
     #   dist: trusty
     #   env: DIST=trusty STACK=EC2
-    - sudo: required
-      dist: trusty
-      env: DIST=trusty STACK=GCE
+    # - sudo: required
+    #   dist: trusty
+    #   env: DIST=trusty STACK=GCE
     # - os: osx
     #   osx_image: xcode9.1
     # - os: osx
