@@ -12,14 +12,19 @@ cache:
 stages:
   - set up cache
   - test
+  - after
 rvm:
   - '2.4'
   - '2.3'
-  
+
 jobs:
   include:
     - stage: set up cache
-    
+    - stage: after
+      cache:
+        bundler: true
+        name: ${TRAVIS_RUBY_VERSION}_cache
+
 # matrix:
   # include:
     # - sudo: required
