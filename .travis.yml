@@ -23,7 +23,7 @@ jobs:
     - stage: after
       cache:
         bundler: true
-        name: ${TRAVIS_RUBY_VERSION}_cache
+        name: \\$\\{TRAVIS_RUBY_VERSION\\}_cache
 
 # matrix:
   # include:
