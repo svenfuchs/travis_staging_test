@@ -2,17 +2,10 @@ language: ruby
 dist: trusty
 sudo: false
 
-rvm:
-  - '2.5'
-  - '2.4'
-
-before_install:
-  - curl -I google.com
-
 install: skip
 
 script:
-  - echo hello
+  - cat /etc/hosts
 
 matrix:
   include:
@@ -41,17 +34,6 @@ matrix:
     #   osx_image: xcode7.3
     # - os: osx
     #   osx_image: xcode6.4
-
-before_deploy:
-  - cd path
-
-deploy:
-  provider: codedeploy
-  edge:
-    branch: code_deploy-head_object
-  on:
-    all_branches:
-      true
 
 # deploy:
 #   edge: true
