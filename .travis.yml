@@ -4,11 +4,11 @@ sudo: false
 install: skip
 
 script:
-  - type _ensure_ruby_23
+  - type _ensure_ruby_2_3_5
   - rvm alias list
   - rvm list
   - rvm list | grep 2\.3
-  - _ensure_ruby_23
+  - _ensure_ruby_2_3_5
   - type brew
   - brew install tmux
 
