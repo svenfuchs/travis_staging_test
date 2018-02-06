@@ -4,6 +4,7 @@ sudo: false
 install: skip
 
 script:
+  - type _ensure_ruby23
   - type brew
   - brew install tmux
 
