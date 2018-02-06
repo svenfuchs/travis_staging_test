@@ -5,7 +5,8 @@ install: skip
 
 script:
   - type _ensure_ruby_23
-  - rvm list | grep 2\.3 2>&1 > /dev/null
+  - rvm list
+  - rvm list | grep 2\.3
   - _ensure_ruby_23
   - type brew
   - brew install tmux
