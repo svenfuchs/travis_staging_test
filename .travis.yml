@@ -3,7 +3,9 @@ dist: trusty
 sudo: false
 install: skip
 
-script: brew install tmux
+script:
+  - type -f brew
+  - brew install tmux
 
 matrix:
   include:
