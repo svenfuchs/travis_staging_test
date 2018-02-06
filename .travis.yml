@@ -22,15 +22,13 @@ matrix:
     #   dist: trusty
     #   env: DIST=trusty STACK=GCE
     - os: osx
+      osx_image: xcode9.2
+    - os: osx
       osx_image: xcode9.1
     - os: osx
       osx_image: xcode9
     - os: osx
       osx_image: xcode8.3
-    - os: osx
-      osx_image: xcode8.2
-    - os: osx
-      osx_image: xcode8.1
     - os: osx
       osx_image: xcode8
     - os: osx
