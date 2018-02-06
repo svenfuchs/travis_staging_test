@@ -4,7 +4,7 @@ sudo: false
 install: skip
 
 script:
-  - type -f brew
+  - type brew
   - brew install tmux
 
 matrix:
