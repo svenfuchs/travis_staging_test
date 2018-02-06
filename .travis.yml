@@ -5,6 +5,9 @@ install: skip
 
 script:
   - type _ensure_ruby_23
+  - set -x
+  - _ensure_ruby_23
+  - set +x
   - type brew
   - brew install tmux
 
