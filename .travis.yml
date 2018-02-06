@@ -6,9 +6,9 @@ install: skip
 
 addons:
   ssh_known_hosts:
-    - host: '199.182.121.223'
-      type: ssh-rsa
-      key: AAAAB3NzaC1yc2EAAAADAQABAAABAQDHRC2t75Wuki5djGSaxK/RfISQKRzDk1Ir2gaUppd+E4X9S/getLt7NoIdRcO9pdUYyK056g8StR/Dj2lMB4a5Xsdabj+zxOctBtFIq16p27hyy5A4EgY/a4fOy0CPaeyQpDc6Kv23KQAwVUDSphVBx6gOqmWJ+Kvf96fmeH51ODt0M0YUbHdfsTKXcZJgB/JlEd//rLN4dIzqAWpQgmNZPeIthlVOLWkj2sffuy2A1t+viJ6JHKz/wnJEv3OiVMIZ3obWdIYjuj1CaVChdwrSPGBdhdhmGsXLfG0KmvJeSqd7WhFsnskN8jxl6XrQG2Vxk5pZM6GZZ+a6ow0umhGr
+    host: '199.182.121.223'
+    type: ssh-rsa
+    key: AAAAB3NzaC1yc2EAAAADAQABAAABAQDHRC2t75Wuki5djGSaxK/RfISQKRzDk1Ir2gaUppd+E4X9S/getLt7NoIdRcO9pdUYyK056g8StR/Dj2lMB4a5Xsdabj+zxOctBtFIq16p27hyy5A4EgY/a4fOy0CPaeyQpDc6Kv23KQAwVUDSphVBx6gOqmWJ+Kvf96fmeH51ODt0M0YUbHdfsTKXcZJgB/JlEd//rLN4dIzqAWpQgmNZPeIthlVOLWkj2sffuy2A1t+viJ6JHKz/wnJEv3OiVMIZ3obWdIYjuj1CaVChdwrSPGBdhdhmGsXLfG0KmvJeSqd7WhFsnskN8jxl6XrQG2Vxk5pZM6GZZ+a6ow0umhGr
 
 script:
   - cat /etc/hosts
