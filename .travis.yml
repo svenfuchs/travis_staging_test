@@ -10,6 +10,7 @@ script:
   - rvm list | grep 2\.3
   - _ensure_ruby_2_3_5
   - type brew
+  - set -v
   - brew install tmux
 
 matrix:
