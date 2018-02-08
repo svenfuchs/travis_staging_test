@@ -20,6 +20,8 @@ install: |
 
 script:
   - uname -a
+  - sw_vers
+  - rvm get stable
   - brew install tmux
 
 matrix:
