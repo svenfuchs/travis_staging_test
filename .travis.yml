@@ -1,17 +1,8 @@
-language: ruby
-dist: trusty
-sudo: false
+language: objective-c
+
 install: skip
 
-script:
-  - type _ensure_ruby_2_3_5
-  - rvm alias list
-  - rvm list
-  - rvm list | grep 2\.3
-  - _ensure_ruby_2_3_5
-  - type brew
-  - set -v
-  - brew install tmux
+script: skip
 
 matrix:
   include:
