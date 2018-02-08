@@ -1,5 +1,4 @@
-language: objective-c
-
+language: ruby
 install: skip
 
 script: skip
