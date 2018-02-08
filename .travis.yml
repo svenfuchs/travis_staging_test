@@ -19,7 +19,8 @@ install: |
 
 
 script:
-  - brew install
+  - uname -a
+  - brew install tmux
 
 matrix:
   include:
