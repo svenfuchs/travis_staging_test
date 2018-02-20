@@ -1,12 +1,11 @@
-language: objective-c
+language: go
+
+go:
+  - 1.10
 
 install: skip
 
-script:
-  - uname -a
-  - sw_vers
-  - env  | grep TRAVIS | sort
-
+script: skip
 matrix:
   include:
     # - sudo: required
