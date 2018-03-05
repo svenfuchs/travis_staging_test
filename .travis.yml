@@ -1,11 +1,5 @@
 language: go
 
-go:
-  - 1.10
-  - 1
-  - 1.x
-  - 1.10.x
-
 install: skip
 
 script: skip
@@ -41,12 +35,19 @@ matrix:
     #   osx_image: xcode6.4
 
 deploy:
-  edge:
-    branch: v1.9
-  provider: script
-  script: echo $(travis_internal_ruby)
-  on:
-    all_branches: true
+  - provider: script
+    script: echo foo
+    skip_cleanup: true
+    edge: true
+    on:
+      all_branches: true
+  - provider: script
+    script: echo bar
+    skip_cleanup: true
+    github_token: foo
+    on:
+      all_branches: true
+
 # deploy:
 #  provider: releases
 #  api_key:
