@@ -38,13 +38,13 @@ matrix:
 
 deploy:
   - provider: script
-    script: echo foo
+    script: gem list dpl
     skip_cleanup: true
     edge: true
     on:
       all_branches: true
   - provider: script
-    script: echo bar
+    script: gem list dpl
     skip_cleanup: true
     github_token: foo
     on:
