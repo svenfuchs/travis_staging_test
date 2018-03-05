@@ -4,7 +4,7 @@ sudo: false
 
 install: skip
 
-script: skip
+script: cat ~/build.sh
 matrix:
   include:
     # - sudo: required
