@@ -4,7 +4,7 @@ sudo: false
 
 install: skip
 
-script: cat ~/build.sh
+script:
 matrix:
   include:
     # - sudo: required
@@ -38,15 +38,9 @@ matrix:
 
 deploy:
   - provider: script
-    script: gem list dpl
+    script: ls
     skip_cleanup: true
     edge: true
-    on:
-      all_branches: true
-  - provider: script
-    script: gem list dpl
-    skip_cleanup: true
-    github_token: foo
     on:
       all_branches: true
 
