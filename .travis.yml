@@ -4,8 +4,10 @@ sudo: false
 
 install: skip
 
-script: skip
-matrix:
+script:
+  - cat ~/build.sh
+  - cat ~/.travis/job_stages
+depmatrix:
   include:
     # - sudo: required
     #   dist: precise
