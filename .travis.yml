@@ -4,9 +4,7 @@ sudo: false
 
 install: skip
 
-script:
-  - cat ~/build.sh
-  - cat ~/.travis/job_stages
+script: skip
 depmatrix:
   include:
     # - sudo: required
@@ -39,17 +37,12 @@ depmatrix:
     #   osx_image: xcode6.4
 
 deploy:
-  provider: ops_works
+  provider: script
   edge:
-     source: dazz/dpl
-     branch: opsworks-update-app-on-success
-  access_key_id: abcdefg
-  secret_access_key: ultrA-5ecr3t
-  app-id: 11223344-5566-7788-9900-aabbccddeeff
+     branch: ha-script-test
+  script: "echo deploy!"
   on:
     all_branches: true
-  wait-until-deployed: true
-  update-app-on-success: true
 
 # deploy:
 #  provider: releases
