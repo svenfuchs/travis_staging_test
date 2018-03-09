@@ -4,7 +4,16 @@ sudo: false
 
 install: skip
 
-script: skip
+before_cache:
+  - shopt -s extglob
+  - rm -rf vendor/!(vendor.json)
+cache:
+  directories:
+    - vendor
+
+script:
+  - cd vendor
+  - touch this that vendor.json
 depmatrix:
   include:
     # - sudo: required
