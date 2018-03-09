@@ -4,7 +4,7 @@ sudo: false
 
 install: skip
 
-script:
+script: skip
 matrix:
   include:
     # - sudo: required
