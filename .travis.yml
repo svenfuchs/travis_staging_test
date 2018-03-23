@@ -1,11 +1,11 @@
 language: ruby
-# dist: trusty
-# sudo: false
+dist: trusty
+sudo: false
 
 install: skip
 
 script:
-  - cat /etc/hosts
+  - env | sort | grep TRAVIS
 
 matrix:
   include:
@@ -21,10 +21,10 @@ matrix:
     # - sudo: required
     #   dist: false
     #   env: DIST=trusty STACK=EC2
-    - os: osx
-      osx_image: xcode9.3beta
-    - os: osx
-      osx_image: xcode9.2
+    # - os: osx
+    #   osx_image: xcode9.3beta
+    # - os: osx
+    #   osx_image: xcode9.2
     # - os: osx
     #   osx_image: xcode9.1
     # - os: osx
