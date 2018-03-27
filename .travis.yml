@@ -11,7 +11,7 @@ cache:
   name: ../../../../../../../etc/passwd
 
 stages:
-  - set up cache
+  - setupcache
   - test
 rvm:
   - '2.4'
@@ -19,7 +19,7 @@ rvm:
 
 jobs:
   include:
-　　　- stage: set up cache
+　　　- stage: setupcache
     # - sudo: required
     #   dist: precise
     #   env: DIST=precise STACK=GCE
