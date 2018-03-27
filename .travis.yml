@@ -2,13 +2,24 @@ language: ruby
 dist: trusty
 sudo: false
 
-install: skip
+# install: skip
 
-script:
-  - env | sort | grep TRAVIS
+script: skip
 
-matrix:
+cache:
+  bundler: true
+  name: ../../../../../../../etc/passwd
+
+stages:
+  - set up cache
+  - test
+rvm:
+  - '2.4'
+  - '2.3'
+
+jobs:
   include:
+　　　- stage: set up cache
     # - sudo: required
     #   dist: precise
     #   env: DIST=precise STACK=GCE
