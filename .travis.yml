@@ -1,6 +1,6 @@
 language: python
 
-python: pypy
+python: 2.7.8
 
 install: skip
 
