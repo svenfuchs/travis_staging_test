@@ -6,10 +6,8 @@ dist: trusty
 
 install: skip
 
-jdk:
-  - openjdk8
-  - openjdk10
-  - oraclejdk11
+addons:
+  chrome: stable
 
 # env:
 #   global:
