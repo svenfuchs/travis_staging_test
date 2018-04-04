@@ -1,5 +1,7 @@
 language: java
 
+version: "= 0"
+
 sudo: false
 
 dist: trusty
