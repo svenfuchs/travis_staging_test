@@ -1,12 +1,16 @@
-language: objective-c
+language: swift
+
+rvm:
+  - '2.0.0'
+  - '2.4.2'
+
+xcode_scheme:
+  - '1'
+  - '2'
 
 install: skip
 
-script:
-  - uname -a
-  - sw_vers
-  - env  | grep TRAVIS | sort
-
+script: skip
 matrix:
   include:
     # - sudo: required
