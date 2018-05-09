@@ -1,24 +1,14 @@
 language: ruby
 
-sudo: false
+sudo: true
 
-install: true
+install: skip
 
-script:
-  - cat ~/build.sh
+script: skip
 
-deploy:
-  - provider: BinTray
-    username: solvingj
-    api_key:
-       secure: ebQ+n7tSPtW4Ou+GAbqv5pQZDtSMXq5xNGNvoGH7651g7bY0tOK5st1LWLo9Kept
-    override: true
-    subject: solvingj
-    repo: public-generic
-    package: "%APPVEYOR_PROJECT_NAME%"
-    version: "%APPVEYOR_REPO_TAG_NAME%"
-    publish: true
-    explode: false
+addons:
+  apt:
+    update: true
 
 notifications:
   email: false
