@@ -6,10 +6,6 @@ install: skip
 
 script: skip
 
-addons:
-  apt:
-    update: true
-
 notifications:
   email: false
   # slack:
