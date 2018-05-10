@@ -1,25 +1,20 @@
 language: ruby
-dist: trusty
-sudo: false
+dist: xenial
+sudo: required
 
-# install: skip
+addons:
+  apt:
+    packages:
+      - git
+
+install: skip
 
 script: skip
 
-cache:
-  bundler: true
-  name: ../../../../../../../etc/passwd
 
-stages:
-  - setupcache
-  - test
-rvm:
-  - '2.4'
-  - '2.3'
-
-jobs:
-  include:
-　　　- stage: setupcache
+# jobs:
+#   include:
+# 　　　- stage: setupcache
     # - sudo: required
     #   dist: precise
     #   env: DIST=precise STACK=GCE
