@@ -2,9 +2,11 @@ language: ruby
 
 sudo: false
 
+before_install: echo $SAUCE_ACCESS_KEY
+
 install: true
 
-script: echo $SAUCE_ACCESS_KEY
+script: skip
 
 addons:
   sauce_connect:
