@@ -2,20 +2,13 @@ language: ruby
 
 sudo: false
 
-before_install: echo $SAUCE_ACCESS_KEY
-
 install: true
 
 script: skip
 
-addons:
-  sauce_connect:
-    username: foobar12345677
-    jwt:
-      - secure: "Nn3QiQtVc3KK9jAhpHdDt0JJ1fok/g5OrbWXoU1IV8MWt6xrvbeRonlAPZ3eMgizs2XULhCha+yGHitgQ3jzEAKvDSihZ9CPHpwgcnvETbzunowQtigQxamLGeKl0nvFNrNssBMOE+/oDd4vpiOA43nu1gr5rPPZzTgVumaHrW4="
-  jwt:
-    - secure: "Nn3QiQtVc3KK9jAhpHdDt0JJ1fok/g5OrbWXoU1IV8MWt6xrvbeRonlAPZ3eMgizs2XULhCha+yGHitgQ3jzEAKvDSihZ9CPHpwgcnvETbzunowQtigQxamLGeKl0nvFNrNssBMOE+/oDd4vpiOA43nu1gr5rPPZzTgVumaHrW4="
-
+cache:
+  directories:
+    - path
 # env:
 #   - DIST=precise STACK=EC2
 
