@@ -1,5 +1,7 @@
 language: ruby
-dist: xenial
+dist:
+  - trusty
+  - xenial
 sudo: required
 
 addons:
