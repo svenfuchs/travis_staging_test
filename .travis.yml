@@ -4,6 +4,7 @@ sudo: false
 dist: trusty
 
 node_js:
+  - node
   - '8'
   - '0.10'
 
