@@ -7,6 +7,8 @@ node_js:
   - '8'
   - '0.10'
 
+before_isntall:
+  - touch package-lock.json
 # env:
 #   global:
 #     - CACHE_DIR=$([ $TRAVIS_OS_NAME = 'linux' ] && echo "FOO" || echo "BAR")
