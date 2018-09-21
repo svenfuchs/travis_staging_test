@@ -15,9 +15,9 @@ install: skip
 #   directories:
 #     - $CACHE_DIR
 
-# env:
-#   global:
-#     - PATH=/usr/local/android-sdk/tools/bin:$PATH
+env:
+  global:
+    - CCFLAGS=-wall
 
 script: skip
 
