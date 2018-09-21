@@ -17,7 +17,7 @@ install: skip
 
 env:
   global:
-    - CCFLAGS=-wall
+    - CCFLAGS=-Wall
 
 script: skip
 
