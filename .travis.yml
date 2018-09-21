@@ -4,12 +4,9 @@ sudo: false
 dist: trusty
 
 node_js:
-  - node
-  - '8'
-  - '0.10'
+  - '0.6'
 
-before_install:
-  - touch package-lock.json
+install: skip
 # env:
 #   global:
 #     - CACHE_DIR=$([ $TRAVIS_OS_NAME = 'linux' ] && echo "FOO" || echo "BAR")
@@ -36,4 +33,3 @@ notifications:
   #env:
   #global:
   #  secure: Bw9BTZqRQ0hlJBInFMxMSQGdc8nMvFxfQQZNxbzrLCgNWZ8ow0sjG9oItOe/Otl7raapmZh+OZsqWAzqvfCfTyueqUaMfqhzB0hzjR8jxfpQP/99db2Ok/s2hOttcfyAKanlbQT7Cvy6SRv4VoFclAY8s6q8Migr8bCWkUjlQU=
-
