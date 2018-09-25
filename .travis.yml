@@ -1,8 +1,19 @@
 language: python
 
-python: 2.7.8
+python: "3.7"
+
+sudo: required
+
+dist: xenial
 
 install: skip
+
+addons:
+  apt:
+    sources:
+      - deadsnakes
+    pacakges:
+      - python3.7-dev
 
 # env:
 #   global:
@@ -26,9 +37,9 @@ matrix:
     # - sudo: required
     #   dist: precise
     #   env: DIST=precise STACK=GCE
-    - sudo: false
-      dist: trusty
-      env: DIST=trusty STACK=EC2
+    # - sudo: false
+    #   dist: trusty
+    #   env: DIST=trusty STACK=EC2
     # - sudo: required
     #   dist: trusty
     #   env: DIST=trusty STACK=GCE
@@ -54,4 +65,3 @@ notifications:
   #env:
   #global:
   #  secure: Bw9BTZqRQ0hlJBInFMxMSQGdc8nMvFxfQQZNxbzrLCgNWZ8ow0sjG9oItOe/Otl7raapmZh+OZsqWAzqvfCfTyueqUaMfqhzB0hzjR8jxfpQP/99db2Ok/s2hOttcfyAKanlbQT7Cvy6SRv4VoFclAY8s6q8Migr8bCWkUjlQU=
-
