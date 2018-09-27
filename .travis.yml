@@ -1,5 +1,8 @@
 language: ruby
 sudo: false
+dist:
+  - xenial
+  - trusty
 
 install: skip
 
