@@ -2,11 +2,16 @@ language: objective-c
 
 install: skip
 
-script:
-  - uname -a
-  - sw_vers
-  - env  | grep TRAVIS | sort
-
+osx_image:
+  - xcode6.4
+  - xcode8.3
+  - xcode10
+  
+addons:
+  homebrew:
+    packages:
+      - openssl
+      
 matrix:
   include:
     # - sudo: required
