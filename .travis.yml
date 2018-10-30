@@ -5,6 +5,7 @@ install: skip
 osx_image:
   - xcode6.4
   - xcode8.3
+  - xcode9.4
   - xcode10
   
 rvm:
