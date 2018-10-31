@@ -18,6 +18,9 @@ addons:
       
 matrix:
   include:
+    - language: node_js
+      osx_image: xcode10
+      script: true
     # - sudo: required
     #   dist: precise
     #   env: DIST=precise STACK=GCE
