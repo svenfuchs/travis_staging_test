@@ -6,6 +6,45 @@ install: skip
 
 script: skip
 
+jobs:
+  include:
+    - os: linux
+      addons:
+        firefox: latest
+    - os: osx
+      addons:
+        firefox: latest
+    - os: linux
+      addons:
+        firefox: latest-esr
+    - os: osx
+      addons:
+        firefox: latest-esr
+    - os: linux
+      addons:
+        firefox: latest-beta
+    - os: osx
+      addons:
+        firefox: latest-beta
+    - os: linux
+      addons:
+        firefox: latest-dev
+    - os: osx
+      addons:
+        firefox: latest-dev
+    - os: linux
+      addons:
+        firefox: latest-nightly
+    - os: osx
+      addons:
+        firefox: latest-nightly
+    - os: linux
+      addons:
+        firefox: latest-unsigned
+    - os: osx
+      addons:
+        firefox: latest-unsigned
+        
 notifications:
   email: false
   # slack:
