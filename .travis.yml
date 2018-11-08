@@ -12,7 +12,7 @@ osx_image:
 addons:
   homebrew:
     packages:
-      - gcc@8
+      - gcc
       
 matrix:
   include:
