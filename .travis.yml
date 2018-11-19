@@ -6,16 +6,15 @@ matrix:
   include:
     - sudo: required
       dist: precise
-      env: DIST=precise STACK=GCE
+      name: Precise
     # - sudo: false
     #   dist: trusty
     #   env: DIST=trusty STACK=EC2
     - sudo: required
       dist: trusty
-      env: DIST=trusty STACK=GCE
-    - sudo: required
-      dist: false
-      env: DIST=trusty STACK=EC2
+      name: Trusty
+    - dist: xenial
+      name: Xenial
     # - os: osx
     #   osx_image: xcode9.2
     # - os: osx
@@ -58,4 +57,3 @@ notifications:
   #env:
   #global:
   #  secure: Bw9BTZqRQ0hlJBInFMxMSQGdc8nMvFxfQQZNxbzrLCgNWZ8ow0sjG9oItOe/Otl7raapmZh+OZsqWAzqvfCfTyueqUaMfqhzB0hzjR8jxfpQP/99db2Ok/s2hOttcfyAKanlbQT7Cvy6SRv4VoFclAY8s6q8Migr8bCWkUjlQU=
-
