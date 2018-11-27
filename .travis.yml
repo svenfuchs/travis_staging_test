@@ -1,13 +1,12 @@
 language: ruby
 sudo: false
-dist:
-  - xenial
-  - trusty
 
 install: skip
 
 script: 
-  - env | sort | grep TRAVIS_
+
+rvm:
+  - truffleruby
 
 
 # jobs:
