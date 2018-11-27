@@ -2,19 +2,22 @@ language: elm
 dist: trusty
 sudo: false
 
+elm:
+  - 0.19.0
+  - 0.18.0
+
 matrix:
   include:
-    - sudo: required
-      dist: precise
-      name: Precise
+    #- sudo: required
+    #  dist: precise
+    #  name: Precise
     # - sudo: false
     #   dist: trusty
     #   env: DIST=trusty STACK=EC2
     - sudo: required
       dist: trusty
-      name: Trusty
-    - dist: xenial
-      name: Xenial
+    #- dist: xenial
+    #  name: Xenial
     # - os: osx
     #   osx_image: xcode9.2
     # - os: osx
