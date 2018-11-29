@@ -5,8 +5,10 @@ sudo: required
 compiler:
   - gcc
   - gcc-6
+  - g++-6
   - clang
   - clang-7
+  - clang++-7
 
 install: skip
 
