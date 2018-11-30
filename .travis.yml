@@ -18,6 +18,8 @@ deploy:
   handler: "lambda_function.lambda_handler"
   access_key_id: $AWS_ACCESS_KEY_ID
   secret_access_key: $AWS_SECRET_ACCESS_KEY
+  on:
+    all_branches: true
 # jobs:
 #   include:
 # 　　　- stage: setupcache
