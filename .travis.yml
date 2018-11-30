@@ -6,7 +6,8 @@ install: skip
 script: date > cache_dir/date.txt
 
 cache:
-  - cache_dir
+  directories:
+    - cache_dir
 
 # jobs:
 #   include:
