@@ -3,11 +3,10 @@ sudo: false
 
 install: skip
 
-script: 
+script: date > cache_dir/date.txt
 
-rvm:
-  - truffleruby
-
+cache:
+  - cache_dir
 
 # jobs:
 #   include:
