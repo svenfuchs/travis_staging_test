@@ -1,18 +1,17 @@
-language: objective-c
+language: node_js
+
+node_js: node
 
 install: skip
 script: skip
 
 osx_image:
-  - xcode6.4
-  - xcode8.3
-  - xcode9.4
-  - xcode10
-  
-addons:
-  homebrew:
-    packages:
-      - gcc
+#  - xcode6.4
+#  - xcode8.3
+#  - xcode9.4
+#  - xcode10
+
+cache: yarn
       
 matrix:
   include:
