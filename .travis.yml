@@ -1,11 +1,8 @@
 language: ruby
-sudo: false
-
-rvm:
-  - truffleruby
-  - ruby-head
-  - 2.6.0
-  - 2.5.3
+addons:
+  apt:
+    packages:
+      - git-lfs
 install: skip
 
 script: date > cache_dir/date.txt
