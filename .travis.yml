@@ -1,10 +1,11 @@
 language: ruby
-apt:
-  sources:
-    - mysql-5.7-trusty
-  packages:
-    - mysql-server
-    - mysql-client
+addons:
+  apt:
+    sources:
+      - mysql-5.7-trusty
+    packages:
+      - mysql-server
+      - mysql-client
 dist: trusty
 install: skip
 script: skip
