@@ -1,12 +1,14 @@
-language: ruby
-addons:
-  apt:
-    sources:
-      - mysql-5.7-trusty
-    packages:
-      - mysql-server
-      - mysql-client
-dist: trusty
+language: r
+warnings_are_errors: false
+fortran: false
+latex: false
+pandoc: false
+os: osx
+jobs:
+  include:
+    - disable_homebrew: true
+    - disable_homebrew: false
+
 install: skip
 script: skip
 
@@ -69,4 +71,3 @@ notifications:
   #env:
   #global:
   #  secure: Bw9BTZqRQ0hlJBInFMxMSQGdc8nMvFxfQQZNxbzrLCgNWZ8ow0sjG9oItOe/Otl7raapmZh+OZsqWAzqvfCfTyueqUaMfqhzB0hzjR8jxfpQP/99db2Ok/s2hOttcfyAKanlbQT7Cvy6SRv4VoFclAY8s6q8Migr8bCWkUjlQU=
-
