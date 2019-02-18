@@ -1,6 +1,12 @@
 language: node_js
 
-sudo: false
+addons:
+  apt:
+    sources:
+      - mysql-5.7-trusty
+    packages:
+      - mysql-server
+      - mysql-client
 dist: trusty
 
 node_js:
