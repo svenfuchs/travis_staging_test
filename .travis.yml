@@ -1,15 +1,13 @@
 language: ruby
-addons:
-  apt:
-    packages:
-      - git-lfs
+apt:
+  sources:
+    - mysql-5.7-trusty
+  packages:
+    - mysql-server
+    - mysql-client
+dist: trusty
 install: skip
-
-script: date > cache_dir/date.txt
-
-cache:
-  directories:
-    - cache_dir
+script: skip
 
 # jobs:
 #   include:
