@@ -14,7 +14,7 @@ install: skip
 # cache:
 #   directories:
 #     - $CACHE_DIR
-script: SKIP
+script: skip
 
 matrix:
   include:
