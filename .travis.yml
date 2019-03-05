@@ -1,4 +1,4 @@
-language: php
+language: hack
 
 dist: trusty
 
@@ -14,7 +14,7 @@ install: skip
 # cache:
 #   directories:
 #     - $CACHE_DIR
-script: cat ~/build.sh
+script: SKIP
 
 matrix:
   include:
