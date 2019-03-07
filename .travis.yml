@@ -16,6 +16,9 @@ install: skip
 #     - $CACHE_DIR
 script: skip
 
+cache:
+  directories:
+    - path
 matrix:
   include:
     # - sudo: false
