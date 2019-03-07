@@ -2,6 +2,10 @@ language: hack
 
 dist: trusty
 
+hhvm:
+  - 
+  - hhvm
+  - hhvm-dbg
 
 sudo: false
 
