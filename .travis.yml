@@ -1,5 +1,7 @@
 language: hack
 
+hhvm: 3.30-lts
+
 dist: trusty
 
 sudo: false
