@@ -1,27 +1,13 @@
-language: android
-dist: trusty
-sudo: required
+language: erlang
+dist: xenial
 
-android:
-  components:
-    - tools
-    - platform-tools
-    - tools
-
-    - android-25
-
-    - build-tools-25.0.2
-    - extra
-    - extra-google-m2repository
-    - extra-android-m2repository
-    - extra-android-support
-
-jdk: oraclejdk8
+otp_release:
+  -
+  - 20.1
 
 install: skip
 
-script:
-  - sdkmanager --help
+script: skip
 
 matrix:
   include:
