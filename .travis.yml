@@ -2,11 +2,6 @@ language: hack
 
 dist: trusty
 
-hhvm:
-  - 
-  - hhvm
-  - hhvm-dbg
-
 sudo: false
 
 install: skip
@@ -20,9 +15,6 @@ install: skip
 #     - $CACHE_DIR
 script: skip
 
-cache:
-  directories:
-    - path
 matrix:
   include:
     # - sudo: false
