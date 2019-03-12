@@ -2,10 +2,10 @@ language: php
 
 dist: trusty
 
-
 sudo: false
 
 install: skip
+script: skip
 
 # env:
 #   global:
@@ -14,7 +14,6 @@ install: skip
 # cache:
 #   directories:
 #     - $CACHE_DIR
-script: cat ~/build.sh
 
 matrix:
   include:
