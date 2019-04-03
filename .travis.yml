@@ -1,8 +1,4 @@
 language: ruby
-rvm:
-  - 2.6.1
-  - 2.4
-  -
 dist: xenial
 install: skip
 script: skip
@@ -57,13 +53,12 @@ script: skip
 notifications:
   email: false
   #  webhooks: http://requestb.in/rin6s6ri
-  #slack:
-  #  rooms:
-  #    - secure: "lJvygEEwbvbTua6vhOQCgg/voA7iH9sgm6yj9pC9fnYBf++8DWbyyM3sUB3ZIBaeqUlwiEXmn5HjgQlzB1+JTHPtOJtd05m72kOOSEIcXqcLK3Of51E4fEzjrAZ4x/nJQeIIrUzpnlVrSpgFkCP1qNWq1AV+iSjoFFbTn2v7hA="
-  #  template:
-  #     - "Build <%{build_url}|#%{build_number}> (<%{compare_url}|%{commit}>) of %{repository}@%{branch} by %{author} %{result} in %{duration} (elapsed time: %{elapsed_time})subject: %{commit_subject} message: %{commit_message}"
+  slack:
+   rooms:
+     - secure: "lJvygEEwbvbTua6vhOQCgg/voA7iH9sgm6yj9pC9fnYBf++8DWbyyM3sUB3ZIBaeqUlwiEXmn5HjgQlzB1+JTHPtOJtd05m72kOOSEIcXqcLK3Of51E4fEzjrAZ4x/nJQeIIrUzpnlVrSpgFkCP1qNWq1AV+iSjoFFbTn2v7hA="
+   branch_template:
+      - "foobar!"
 
   #env:
   #global:
   #  secure: Bw9BTZqRQ0hlJBInFMxMSQGdc8nMvFxfQQZNxbzrLCgNWZ8ow0sjG9oItOe/Otl7raapmZh+OZsqWAzqvfCfTyueqUaMfqhzB0hzjR8jxfpQP/99db2Ok/s2hOttcfyAKanlbQT7Cvy6SRv4VoFclAY8s6q8Migr8bCWkUjlQU=
-
