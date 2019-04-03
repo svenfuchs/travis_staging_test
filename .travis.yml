@@ -55,7 +55,7 @@ notifications:
   #  webhooks: http://requestb.in/rin6s6ri
   slack:
    rooms:
-     - secure: "lJvygEEwbvbTua6vhOQCgg/voA7iH9sgm6yj9pC9fnYBf++8DWbyyM3sUB3ZIBaeqUlwiEXmn5HjgQlzB1+JTHPtOJtd05m72kOOSEIcXqcLK3Of51E4fEzjrAZ4x/nJQeIIrUzpnlVrSpgFkCP1qNWq1AV+iSjoFFbTn2v7hA="
+     - secure: "WO3IZVKfmcrKXOTkPVV2uoqG+67aawHWkEjVbbaJKwMK6PgzHbh0UAGprdYuDEagxOja42AwP/kXadGqR6wDEzRzzEe+6VgJ+laysn2g6nV75mQH2DwYN6tuDev/Y9oMVRcwKzIJDh7Vsh7K5isemXc0F+w6pHoyNcrq5OeEVHg="
    branch_template:
       - "foobar!"
 
