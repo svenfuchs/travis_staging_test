@@ -3,6 +3,15 @@ dist: xenial
 install: skip
 script: skip
 
+addons:
+  snaps:
+    - name: aws-cli
+      classic: true
+      channel: latest/edge
+    - hugo
+    - name: postman
+      confinement: classic
+
 # jobs:
 #   include:
 # 　　　- stage: setupcache
