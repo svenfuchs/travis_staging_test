@@ -6,7 +6,7 @@ script: skip
 addons:
   apt:
     sources:
-      - sourceline: 'ppa:inkscape.dev/stable'
+      - deadsnakes
     packages:
       - inkscape
       
