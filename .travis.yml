@@ -1,11 +1,13 @@
 language: ruby
 dist: xenial
 install: skip
-script: skip
 
 jobs:
   include:
     - stage: warm_cache
+      script:
+        - echo "foo" > foo.txt
+        - echo "bar" > bar.txt
       workspaces:
         create:
           - name: ws1
@@ -19,6 +21,9 @@ jobs:
         use:
           - ws1
           - ws2
+      script:
+        - cat foo.txt || true
+        - cat bar.txt || true
 #     - stage: setupcache
 #     - sudo: required
 #       dist: precise
