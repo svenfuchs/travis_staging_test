@@ -3,8 +3,7 @@ dist: xenial
 install: skip
 
 cache:
-  edge: 
-    branch: msg-tweaks
+  branch: msg-tweaks
 
 jobs:
   include:
