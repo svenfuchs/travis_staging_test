@@ -3,9 +3,9 @@ dist: xenial
 install: skip
 
 cache:
-  edge: msg-tweaks
-  bundler: true
-  
+  edge: 
+    branch: msg-tweaks
+
 jobs:
   include:
     - stage: warm_cache
