@@ -2,6 +2,9 @@ language: ruby
 dist: xenial
 install: skip
 
+cache:
+  edge: msg-tweaks
+  
 jobs:
   include:
     - stage: warm_cache
