@@ -4,6 +4,7 @@ install: skip
 
 cache:
   edge: msg-tweaks
+  bundler: true
   
 jobs:
   include:
