@@ -1,5 +1,5 @@
 language: ruby
-dist: trusty
+arch: arm64
 install: skip
 script: skip
 
