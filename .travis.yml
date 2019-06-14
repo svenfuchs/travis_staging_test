@@ -1,6 +1,6 @@
 language: ruby
 dist: xenial
-
+script: skip
 cache:
   bundler: true
   branch: expand_path
