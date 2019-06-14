@@ -1,12 +1,9 @@
 language: ruby
 dist: xenial
-install: skip
-
-script: skip
 
 cache:
   bundler: true
-  edge: msg-tweaks
+  branch: expand_path
 
 
 # matrix:
