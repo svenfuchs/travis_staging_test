@@ -1,32 +1,8 @@
 language: ruby
-dist: xenial
+dist: trusty
 install: skip
+script: skip
 
-cache:
-  branch: msg-tweaks
-
-jobs:
-  include:
-    - stage: warm_cache
-      script:
-        - echo "foo" > foo.txt
-        - echo "bar" > bar.txt
-      workspaces:
-        create:
-          - name: ws1
-            paths:
-              - foo.txt
-          - name: ws2
-            paths:
-              - bar.txt
-    - stage: use_cache
-      workspaces:
-        use:
-          - ws1
-          - ws2
-      script:
-        - cat foo.txt || true
-        - cat bar.txt || true
 #     - stage: setupcache
 #     - sudo: required
 #       dist: precise
