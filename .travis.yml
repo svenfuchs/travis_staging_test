@@ -6,7 +6,19 @@ addons:
   apt:
     packages:
       - snapd
-
+      - gcc 
+      - pkg-config 
+      - git 
+      - tzdata 
+      - libpcre3-dev 
+      - libevent-dev 
+      - libyaml-dev 
+      - libgmp-dev 
+      - libssl-dev 
+      - libxml2-dev
+before_install:
+  - sudo snap install crystal --classic --edge
+  - crystal --version
 #     - stage: setupcache
 #     - sudo: required
 #       dist: precise
