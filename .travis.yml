@@ -2,6 +2,10 @@ language: crystal
 dist: trusty
 install: skip
 crystal: nightly
+addons:
+  apt:
+    packages:
+      - snapd
 
 #     - stage: setupcache
 #     - sudo: required
