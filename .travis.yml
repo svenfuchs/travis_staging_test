@@ -2,6 +2,8 @@ language: ruby
 dist: xenial
 install: skip
 
+cache:
+  branch: bash-multi
 jobs:
   include:
     - stage: warm_cache
