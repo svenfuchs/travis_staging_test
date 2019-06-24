@@ -1,4 +1,4 @@
-language: c
+language: cpp
 dist: trusty
 sudo: required
 
@@ -8,9 +8,13 @@ compiler:
   - clang
   - clang-7
 
+env:
+  - CXX=foo
+  - C=bar
 install: skip
 
-script: skip
+script:
+  - env | sort | grep C
 
 matrix:
   # include:
