@@ -1,13 +1,14 @@
 language: hack
 
 hhvm:
-  - hhvm-4.12-lts
+  - hhvm-4.1
   - 
   - hhvm
   - hhvm-nightly
   - hhvm-dev
   - hhvm-3.15-lts
-  - hhvm-3.25
+  - hhvm-3.29
+  - hhvm-3.30-lts
 dist: xenial
 
 install: skip
