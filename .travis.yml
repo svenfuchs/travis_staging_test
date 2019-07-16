@@ -1,9 +1,13 @@
-language: node_js
-
-node_js: node
+language: ruby
 
 install: skip
 script: skip
+
+rvm:
+  - jruby
+  - jruby-head
+  - jruby-9.2.7.0
+  - ruby-head
 
 osx_image:
 #  - xcode6.4
