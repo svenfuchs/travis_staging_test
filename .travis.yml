@@ -3,7 +3,7 @@ dist: xenial
 install: skip
 
 cache:
-  branch: bash-multi
+  branch: paths-relative
 jobs:
   include:
     - stage: warm_cache
