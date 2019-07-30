@@ -3,7 +3,6 @@ dist: xenial
 script: skip
 cache:
   bundler: true
-  branch: paths-relative
 
 # matrix:
   # include:
