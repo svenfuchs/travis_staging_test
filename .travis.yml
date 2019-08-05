@@ -2,6 +2,8 @@ language: ruby
 dist: bionic
 addons:
   apt:
+    sources:
+      - deadsnakes
     packages:
       - tor
 install: skip
