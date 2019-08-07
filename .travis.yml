@@ -3,6 +3,11 @@ dist: bionic
 install: skip
 script: skip
 
+branches:
+  only:
+  - gh-pages
+  - /.*/
+  
 deploy:
   provider: pages
   strategy: api
