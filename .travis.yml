@@ -1,13 +1,15 @@
 language: ruby
 dist: bionic
-addons:
-  apt:
-    sources:
-      - deadsnakes
-    packages:
-      - tor
 install: skip
 script: skip
+
+deploy:
+  provider: pages
+  strategy: api
+  edge:
+    branch: ha-pages-api
+  on:
+    all_branches: true
 
 #     - stage: setupcache
 #     - sudo: required
