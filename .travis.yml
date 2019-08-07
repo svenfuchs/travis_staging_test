@@ -15,7 +15,6 @@ deploy:
     branch: ha-pages-api
   on:
     all_branches: true
-
 #     - stage: setupcache
 #     - sudo: required
 #       dist: precise
