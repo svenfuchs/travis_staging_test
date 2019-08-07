@@ -11,6 +11,7 @@ branches:
 deploy:
   provider: pages
   strategy: api
+  github_token: $GITHUB_OAUTH_TOKEN
   edge:
     branch: ha-pages-api
   on:
