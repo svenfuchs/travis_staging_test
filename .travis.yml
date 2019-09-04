@@ -8,6 +8,18 @@ script: skip
 
 matrix:
   include:
+    - dist: trusty
+      go: stable
+    - dist: trusty
+      go: '1.11.6'
+    - dist: xenial
+      go: stable
+      script: "false"
+    - dist: xenial
+      go: '1.11.6'
+  allow_failures:
+    - dist: xenial
+      go: stable
     # - sudo: required
     #   dist: precise
     #   env: DIST=precise STACK=GCE
@@ -37,25 +49,7 @@ matrix:
     # - os: osx
     #   osx_image: xcode6.4
 
-deploy:
-  - edge:
-      branch: bintray-unauth
-    provider: bintray
-    file: bintray.js
-    user: fg2it
-    key: foobar
-    skip_cleanup: true
-    on:
-      all_branches: true
-  - edge:
-      branch: bintray-unauth
-    provider: bintray
-    file: bintray.js
-    user: fg2it
-    key: foobar
-    skip_cleanup: true
-    on:
-      all_branches: true
+
 # deploy:
 #  provider: releases
 #  api_key:
