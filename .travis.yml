@@ -6,7 +6,6 @@ install: skip
 
 script: skip
 
-
 matrix:
   include:
     - dist: trusty
@@ -20,7 +19,7 @@ matrix:
       go: '1.11.6'
   allow_failures:
     - dist: xenial
-      go: stable
+    - go: stable
     # - sudo: required
     #   dist: precise
     #   env: DIST=precise STACK=GCE
