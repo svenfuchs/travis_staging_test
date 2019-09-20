@@ -7,10 +7,16 @@ install: skip
 script: skip
 
 notifications:
-  email: false
-  slack:
-    on_start: always
-    rooms:
-      - secure: "meu5RUiQjes/VOgw6y3Udto8cDUWWd+l/BJZSbEcqhjbwSiphC+QbOmM9rgcXlDujC52GNx/KIkqjd8Gsuwc7xP3cjaoow38pyiA2Zs3ttj/pXT1kg5qZbT1R8x9aICp3dxZZySATWPknMV5UsyTYb5j6qwU6reSnJNuzd8nJ48="
-    template:
-       - "Build <%{build_url}|#%{build_number}> (<%{compare_url}|%{commit}>) of %{repository}@%{branch} by %{author} %{result} in %{duration} (elapsed time: %{elapsed_time}) subject: %{commit_subject} message: %{commit_message}"
+  - email: false
+  - slack:
+      on_start: always
+      rooms:
+        - secure: "meu5RUiQjes/VOgw6y3Udto8cDUWWd+l/BJZSbEcqhjbwSiphC+QbOmM9rgcXlDujC52GNx/KIkqjd8Gsuwc7xP3cjaoow38pyiA2Zs3ttj/pXT1kg5qZbT1R8x9aICp3dxZZySATWPknMV5UsyTYb5j6qwU6reSnJNuzd8nJ48="
+      template:
+        - "This is the first notification: Build <%{build_url}|#%{build_number}> (<%{compare_url}|%{commit}>) of %{repository}@%{branch} by %{author} %{result} in %{duration} (elapsed time: %{elapsed_time}) subject: %{commit_subject} message: %{commit_message}"
+  - slack:
+      on_start: always
+      rooms:
+        - secure: "meu5RUiQjes/VOgw6y3Udto8cDUWWd+l/BJZSbEcqhjbwSiphC+QbOmM9rgcXlDujC52GNx/KIkqjd8Gsuwc7xP3cjaoow38pyiA2Zs3ttj/pXT1kg5qZbT1R8x9aICp3dxZZySATWPknMV5UsyTYb5j6qwU6reSnJNuzd8nJ48="
+      template:
+        - "This is the second notficiation: Build <%{build_url}|#%{build_number}> (<%{compare_url}|%{commit}>) of %{repository}@%{branch} by %{author} %{result} in %{duration} (elapsed time: %{elapsed_time}) subject: %{commit_subject} message: %{commit_message}"
