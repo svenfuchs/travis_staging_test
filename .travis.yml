@@ -60,11 +60,11 @@ notifications:
   slack:
     - rooms:
         - secure: "WO3IZVKfmcrKXOTkPVV2uoqG+67aawHWkEjVbbaJKwMK6PgzHbh0UAGprdYuDEagxOja42AwP/kXadGqR6wDEzRzzEe+6VgJ+laysn2g6nV75mQH2DwYN6tuDev/Y9oMVRcwKzIJDh7Vsh7K5isemXc0F+w6pHoyNcrq5OeEVHg="
-      branch_template:
+      template:
         - "foobar!"
     - rooms:
         - secure: "WO3IZVKfmcrKXOTkPVV2uoqG+67aawHWkEjVbbaJKwMK6PgzHbh0UAGprdYuDEagxOja42AwP/kXadGqR6wDEzRzzEe+6VgJ+laysn2g6nV75mQH2DwYN6tuDev/Y9oMVRcwKzIJDh7Vsh7K5isemXc0F+w6pHoyNcrq5OeEVHg="
-      branch_template:
+      template:
         - "second!"
 
   #env:
