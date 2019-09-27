@@ -57,7 +57,7 @@ notifications:
     - rooms:
         - secure: "WO3IZVKfmcrKXOTkPVV2uoqG+67aawHWkEjVbbaJKwMK6PgzHbh0UAGprdYuDEagxOja42AwP/kXadGqR6wDEzRzzEe+6VgJ+laysn2g6nV75mQH2DwYN6tuDev/Y9oMVRcwKzIJDh7Vsh7K5isemXc0F+w6pHoyNcrq5OeEVHg="
       template:
-        - "Build <%{build_url}|#%{build_number}> (<%{compare_url}|%{commit}>) of %{repository_slug}@%{branch} by %{author} %{result} in %{duration} foobar! no pull request! foo!"
+        - "Build <%{build_url}|#%{build_number}> (<%{compare_url}|%{commit}>) of %{repository_slug}@%{branch} by %{author} %{result} in %{duration} foobar! no pull request! foo! with debug output"
       on_pull_requests: false
     - rooms:
         - secure: "WO3IZVKfmcrKXOTkPVV2uoqG+67aawHWkEjVbbaJKwMK6PgzHbh0UAGprdYuDEagxOja42AwP/kXadGqR6wDEzRzzEe+6VgJ+laysn2g6nV75mQH2DwYN6tuDev/Y9oMVRcwKzIJDh7Vsh7K5isemXc0F+w6pHoyNcrq5OeEVHg="
