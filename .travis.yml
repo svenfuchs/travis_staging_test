@@ -57,7 +57,7 @@ notifications:
     - rooms:
         - secure: "WO3IZVKfmcrKXOTkPVV2uoqG+67aawHWkEjVbbaJKwMK6PgzHbh0UAGprdYuDEagxOja42AwP/kXadGqR6wDEzRzzEe+6VgJ+laysn2g6nV75mQH2DwYN6tuDev/Y9oMVRcwKzIJDh7Vsh7K5isemXc0F+w6pHoyNcrq5OeEVHg="
       template:
-        - "foobar! no pull request!"
+        - "foobar! no pull request! foo!"
       on_pull_requests: false
     - rooms:
         - secure: "WO3IZVKfmcrKXOTkPVV2uoqG+67aawHWkEjVbbaJKwMK6PgzHbh0UAGprdYuDEagxOja42AwP/kXadGqR6wDEzRzzEe+6VgJ+laysn2g6nV75mQH2DwYN6tuDev/Y9oMVRcwKzIJDh7Vsh7K5isemXc0F+w6pHoyNcrq5OeEVHg="
