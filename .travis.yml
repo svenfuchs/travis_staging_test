@@ -1,7 +1,12 @@
 language: bash
-arch: arm64
+arch:
+  - amd64
+  - arm64
 install: skip
 script: skip
+cache:
+  directory: foo
+
 
 #     - stage: setupcache
 #     - sudo: required
