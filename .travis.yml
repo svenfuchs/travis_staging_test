@@ -5,7 +5,8 @@ arch:
 install: skip
 script: skip
 cache:
-  directory: foo
+  directories:
+    - foo
 
 
 #     - stage: setupcache
