@@ -1,14 +1,21 @@
 language: ruby
-dist: bionic
-addons:
-  apt:
-    sources:
-      - deadsnakes
-    packages:
-      - tor
 install: skip
 script: skip
 
+jobs:
+  include:
+    - git:
+        autocrlf: true
+      name: autocrlf true
+    - git:
+        autocrlf: false
+      name: autocrlf false
+    - git:
+        autocrlf: input
+      name: autocrlf input
+    - git:
+        autocrlf: invalid
+      name: autocrlf invalid
 #     - stage: setupcache
 #     - sudo: required
 #       dist: precise
