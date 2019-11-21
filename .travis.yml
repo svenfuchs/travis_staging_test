@@ -6,6 +6,8 @@ node_js: 12
 install: skip
 script:
   - git config -l
-  
+
+addons:
+  artifacts: true
 notifications:
   email: false
