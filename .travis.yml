@@ -2,6 +2,10 @@ language: ruby
 
 sudo: true
 
+env:
+  global:
+    - secure: "A8i4cnQo3v32gKBIVkUccsJXbmG2bvBiH4e36uQWVaQvQDzufuoDll7T5MMjrsm4uc7Ki0JR3gMLtM/GsWeO3WeTuwxol53nar2+I1hbFvIflGiYBETCNoZqKetxLu2WcAeoyUK9oHCeDq/Z1w5zQcZH+vzs4k9Frplrd3itvSY="
+
 install: skip
 
 script: skip
