@@ -2,6 +2,11 @@ language: bash
 arch:
   - amd64
   - arm64
+  - ppc64le
+  - s390x
+addons:
+  snaps:
+    - hugo
 install: skip
 script: skip
 cache:
