@@ -1,27 +1,11 @@
-language: android
-dist: trusty
+language: ruby
+dist: xenial
 sudo: required
-
-android:
-  components:
-    - tools
-    - platform-tools
-    - tools
-
-    - android-25
-
-    - build-tools-25.0.2
-    - extra
-    - extra-google-m2repository
-    - extra-android-m2repository
-    - extra-android-support
-
-jdk: oraclejdk8
 
 install: skip
 
 script:
-  - sdkmanager --help
+  - if [[ $((1 + RANDOM % 10)) > 5 ]]; then true; else false; fi
 
 matrix:
   include:
