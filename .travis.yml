@@ -1,14 +1,2 @@
-language: ruby
-
-sudo: true
-
-env:
-  global:
-    - secure: "CBAnlrs/490FSTmOYImb+agGah6UQeVOQ6jfcgPCXWbRPDmSsAjAlWsZEZc0Q0rlF3Aq47h6mw228qbO4x+VFYfj9Ap+hZABZM6dDrxEUSpLbEROaovbYC7bQgJCRGCFA50mOZXu+wb0RXxupNf5tfL61sanQ1QMQ5g1dIZTZw4="
-#     - secure: "g71IE+fKW/5WcDUMIgZhA6f+LEeWtPhaFM9UCgcbhCvPaUAjzrWLEwcsCaOz5s2elwFDeHCE32I831ZgKBuMswAYnZhC7wSWALkLR4Bav1c+U663TcrNWAVajexPIU5mdXViq8NeHcDnvR0+fu04HIu80yvI/VwSyX8tOogRba8="
-install: skip
-
-script: skip
-
-notifications:
-  email: false
+language: script
+script: bitcoind
